@@ -1,0 +1,4 @@
+site_name: Welcome to Novia Ni's page
+nav:
+    - Home: index.md
+    - About MkDocs: MkDocs_help.md
