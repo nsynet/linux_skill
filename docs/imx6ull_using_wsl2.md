@@ -6,7 +6,7 @@
 
 为了保持环境的一致性,还是需要安装ubuntu 18.04.我在微软store下载wsl的ubuntu18.04直接闪退,后来了解到在  [https://store.rg-adguard.net/](https://link.zhihu.com/?target=https%3A//store.rg-adguard.net/) 可以下载商店的软件包,然后用如下 1\~4步,其中第4步是在powershell中安装下载的.appx的离线包:
 
-![如何下载微软商店的软件.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/b4c2b16e04dd41b89232ec20b4c56461~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgZmVmamxzZGZkZnN4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTk0MzU5MjI4OTQ1MTg5NSJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1749290085&x-orig-sign=535ENtRxLlO7WKQLlkWHe90Ob8w%3D)
+![如何下载微软商店的软件.png](./imx6ull_using_wsl2_00.webp)
 
 ```plain&#x20;text
 
@@ -146,7 +146,7 @@ buildroot2020.02.x  
 
 *   Usb otg口升级时,需要直连电脑,不能经过usb hub
 
-![图片.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/386dbe2497eb45b7a34b3b47f120abac~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgZmVmamxzZGZkZnN4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTk0MzU5MjI4OTQ1MTg5NSJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1749290085&x-orig-sign=sCK8ldaEvi2G2FxDzJlTNJhYSrQ%3D)
+![图片.png](./imx6ull_using_wsl2_10.webp)
 
 ## 只升级zImage和dtb
 
@@ -163,7 +163,7 @@ tftp -pr 文件名 对方IP地址
 
 把zImage和dtb从windows桌面传到开发板的/boot下,然后重启即生效,参考如下:
 
-![图片-1.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/550a89c0c60347bd995fda5bf69145d2~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgZmVmamxzZGZkZnN4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTk0MzU5MjI4OTQ1MTg5NSJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1749290085&x-orig-sign=yjvPMDFuQWQHFoetIaMV7Zoj2sc%3D)
+![图片-1.png](./imx6ull_using_wsl2_20.webp)
 
 注:因为开发板又有emmc,又有sd卡,并且烧sd卡时需要先上电再拔卡,导致容易混乱,我是直接放弃使用sd卡,只使用emmc.
 
@@ -171,4 +171,4 @@ tftp -pr 文件名 对方IP地址
 
 通过ssh插件,操作如下:
 
-![图片-2.png](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/ba4c0b9ed8f647099ee707449d03a1a1~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgZmVmamxzZGZkZnN4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTk0MzU5MjI4OTQ1MTg5NSJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1749290085&x-orig-sign=G4NN8Uc4OkHZyHyhcLlCr7efDVE%3D)
+![图片-2.png](./imx6ull_using_wsl2_30.webp)

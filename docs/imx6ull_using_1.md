@@ -6,26 +6,26 @@
 ## 开发环境
 IMX6ULL CPU资源
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/32c7f752f1854b65b6c87acadd3ea8a9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1878&h=1619&s=683323&e=png&b=fdfdfd)
+![image.png](./imx6ull_using_1_00.webp)
 
 百问网100ask的imx6ull  PRO开发板的接口:
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/60b05f2701714d1fbb1037f08000d2f5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=949&h=1227&s=1276358&e=png&b=faf6f6)
+![image.png](./imx6ull_using_1_10.webp)
 开发板登录名是 root，无需密码
 
 
 J5插座作为摄像头用时:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/78cab74854b3431bb95b70f6ea233ea4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1379&h=686&s=223487&e=png&b=fffefe)
+![image.png](./imx6ull_using_1_20.webp)
 J5插座作为IO扩展时:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/940c30aea9ba4ea08ae75c53d8d295d4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=635&h=448&s=125020&e=png&b=fffefe)
+![image.png](./imx6ull_using_1_30.webp)
 
 ### 在windows+虚拟机环境下开发
 
 #### 在windows +虚拟机环境下开发（参考《第四 A 章 使用 USB 网卡直连配置网络》）
 
 //启动方式如下：
-![image](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9d6fe96bcc484cb5bde4ec1c251db3ca~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1431\&h=742\&s=289174\&e=png\&b=fefdfd)
+![image](./imx6ull_using_1_40.webp)
 
 注意：这个拨码仅仅是uboot的启动，而uboot有可能启动的是sd卡（mmc=0），也考虑启动的是emmc（mmc=1），可以在uboot的环境变量中配置：
 
@@ -124,18 +124,18 @@ console=ttymxc0,115200 root=/dev/mmcblk1p2 rootwait rw
 
 
 //调试环境如下：
-![image](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ca0d7a7fee4d47ee85172ddeba32faf6~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1491\&h=813\&s=756195\&e=png\&b=fcfbfb)
+![image](./imx6ull_using_1_50.webp)
 
 虚拟机的配置类似如下：
-![image](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/326728aaed1a45cf9a423457095810c0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3000\&h=1875\&s=648429\&e=png\&b=2d0922)
+![image](./imx6ull_using_1_60.webp)
 
 vscode使用ssh remote插件远程登陆vmware的代码：
 
-<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c526a1c6b821472596485efa2c5779d2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1353&#x26;h=2000&#x26;s=164404&#x26;e=png&#x26;b=fefefe" width="40%">
+![image](./imx6ull_using_1_70.webp)
 
 效果图：
 
-<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fcd682498b9a4a118c0b05f991678369~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2022&#x26;h=1395&#x26;s=261541&#x26;e=png&#x26;b=f7f7f7" width="40%">
+![image](./imx6ull_using_1_80.webp)
 
 //开发板配置:
 ifconfig eth0 192.168.5.9

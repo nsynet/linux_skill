@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Imx6ull using wsl2 - Welcome to Novia Ni's page</title>
+        <title>使用wsl2搭建韦东山imx6ull pro开发板的开发环境 - Welcome to Novia Ni's page</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -65,12 +65,173 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#wsl2imx6ull-pro" class="nav-link">使用wsl2搭建韦东山imx6ull pro开发板的开发环境</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#wsl2ubuntu-1804" class="nav-link">安装wsl2的ubuntu 18.04版本</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#wsl2ubuntu-1804buildroot" class="nav-link">wsl2的ubuntu 18.04基本配置和编译Buildroot</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">整体升级</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#zimagedtb" class="nav-link">只升级zImage和dtb</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#windowswsl2" class="nav-link">在windows下浏览wsl2里的代码</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-</div>
+<h1 id="wsl2imx6ull-pro">使用wsl2搭建韦东山imx6ull pro开发板的开发环境</h1>
+<p>&#x20;  现在linux开发环境一般比较复杂,以韦东山的imx6ull pro开发板为例,需要使用vmware运行虚拟机,然后打通 开发板&lt;-&gt;虚拟机&lt;-&gt;windows桌面这3者的互通,导致很复杂,本文通过wsl2编译镜像,去掉vmware环境,开发板只从windows桌面传递文件,减少环境的复杂性.开发板和windows桌面的连接是参考《嵌入式Linux应用开发完全手册V5.2_IMX6ULL_Pro开发板.pdf》的《第四 A 章 使用 USB 网卡直连配置网络》方法.</p>
+<h2 id="wsl2ubuntu-1804">安装wsl2的ubuntu 18.04版本</h2>
+<p>为了保持环境的一致性,还是需要安装ubuntu 18.04.我在微软store下载wsl的ubuntu18.04直接闪退,后来了解到在  <a href="https://link.zhihu.com/?target=https%3A//store.rg-adguard.net/">https://store.rg-adguard.net/</a> 可以下载商店的软件包,然后用如下 1\~4步,其中第4步是在powershell中安装下载的.appx的离线包:</p>
+<p><img alt="如何下载微软商店的软件.png" src="../imx6ull_using_wsl2_00.webp" /></p>
+<p>```plain&#x20;text</p>
+<p>Add-AppxPackage -Path "C:\path\to\Ubuntu1804.appx"</p>
+<p>注意:将 C:\path\to\Ubuntu1804.appx 替换为实际下载路径。</p>
+<pre><code>
+因为把ubuntu 18.04 后续编译buildroot导致会占用C盘空间太多,所以一开始就转到E盘,参考如下:
+
+```shell
+
+PS C:\Users\nisy_tc&gt; wsl --shutdown
+
+PS C:\Users\nisy_tc&gt; wsl --export Ubuntu-18.04 D:\_temp\ubuntu-18.04.tar
+
+正在导出，这可能需要几分钟时间。...: ./var/lib/lxd/unix.socket: pax format cannot archive sock
+
+操作成功完成。
+
+PS C:\Users\nisy_tc&gt; wsl --unregister Ubuntu-18.04
+
+正在注销。
+
+操作成功完成。
+
+PS C:\Users\nisy_tc&gt; wsl --import Ubuntu-18.04 E:\_wsl_ubuntu18.04 D:\_temp\ubuntu-18.04.tar
+
+正在导入，这可能需要几分钟时间。
+
+操作成功完成。
+
+PS C:\Users\nisy_tc&gt;
+
+</code></pre>
+<h2 id="wsl2ubuntu-1804buildroot">wsl2的ubuntu 18.04基本配置和编译Buildroot</h2>
+<p>启动ubunut 18.04后,添加book账户:</p>
+<pre><code class="language-shell">
+sudo useradd -m -s /bin/bash book
+
+sudo passwd book                  ##输入密码123456
+
+sudo usermod -aG sudo book
+
+</code></pre>
+<p>按照&lt;嵌入式Linux应用开发完全手册V5.2_IMX6ULL_Pro开发板.pdf&gt; 文档的&lt;2.2 安装 Ubuntu 软件 &gt;章节:</p>
+<pre><code class="language-shell">
+git clone https://e.coding.net/weidongshan/DevelopmentEnvConf.git
+
+cd DevelopmentEnvConf  
+
+sudo ./Configuring_ubuntu.sh
+
+</code></pre>
+<p>配置git</p>
+<pre><code class="language-shell">
+git config --global user.email &quot;user@100ask.com&quot;
+
+git config --global user.name &quot;100ask&quot;
+
+</code></pre>
+<p>&lt;2.6.2 下载 BSP &gt;章节执行如下命令:</p>
+<pre><code class="language-shell">
+book@100ask:~$ git clone https://e.coding.net/codebug8/repo.git
+
+ 
+
+book@100ask:~$ mkdir -p 100ask_imx6ull-sdk &amp;&amp; cd 100ask_imx6ull-sdk  
+
+book@100ask:~/100ask_imx6ull-sdk$ ../repo/repo init -u https://gitee.com/weidongshan/manifests.git -b linux-sdk -m imx6ull/100ask_imx6ull_linux4.9.88_release.xml  --no-repo-verify
+
+book@100ask:~/100ask_imx6ull-sdk$  ../repo/repo sync -j4
+
+</code></pre>
+<p>但是我这里repo init 出现报错:"repo: error: unknown branch "master"",所以安装了国内源的repo,再重新repo init后就可以了:</p>
+<pre><code class="language-sql">
+git clone https://mirrors.tuna.tsinghua.edu.cn/git/git-repo
+
+../git-repo/repo init -u https://gitee.com/weidongshan/manifests.git -b linux-sdk -m imx6ull/100ask_imx6ull_linux4.9.88_release.xml --no-repo-verify
+
+</code></pre>
+<p>执行Buildroot 后,编译成功后文件输出路径为 output/images :</p>
+<pre><code class="language-sql">
+buildroot2020.02.x  
+
+  ├── output
+
+    ├── images  
+
+      ├── 100ask_imx6ull-14x14.dtb &lt;--设备树文件  
+
+      ├── rootfs.ext2         &lt;--ext2 格式根文件系统
+
+      ├── rootfs.ext4 -&gt; rootfs.ext2    &lt;--ext2 格式根文件系统  
+
+      ├── rootfs.tar          
+
+      ├── rootfs.tar.bz2       &lt;--打包并压缩的根文件系统，用于NFSROOT 启动
+
+      ├── 100ask-imx6ull-pro-512d-systemv-v1.img      &lt;--完整的系统镜像(可以用来烧写 emmc 和 sd 卡)
+
+      ├── u-boot-dtb.imx       &lt;--u-boot 镜像
+
+      └── zImage          &lt;--内核镜像
+
+</code></pre>
+<h2 id="_1">整体升级</h2>
+<p>&#x20; wsl编译的100ask-imx6ull-pro-512d-systemv-v1.img 直接拷贝到windows桌面的E盘,即wsl2的 /mnt/e/,然后按照&lt;嵌入式Linux应用开发完全手册V5.2_IMX6ULL_Pro开发板.pdf&gt;文档的描述:</p>
+<blockquote>
+<p>&#x20; 可以参考章节《烧写整个系统或更新部分系统》把上面编译出来的 100ask-imx6ull-pro-512d-systemv-v1.img 重命名为 emmc.img(或 sdcard.img)，把 emmc.img(或 sdcard.img)放到“100ask_imx6ull 烧写工具”的 files 目录里，就可以使用工具烧写到 EMMC(或 SD/TF卡)。&#x20;</p>
+</blockquote>
+<p>注意:</p>
+<ul>
+<li>
+<p>100ask_imx6ull_flashing_tool_v4.0.exe  不要在有空格或者标点符号的路径下运行</p>
+</li>
+<li>
+<p>Usb otg口升级时,需要直连电脑,不能经过usb hub</p>
+</li>
+</ul>
+<p><img alt="图片.png" src="../imx6ull_using_wsl2_10.webp" /></p>
+<h2 id="zimagedtb">只升级zImage和dtb</h2>
+<p>使用tftp按照如下命令格式:</p>
+<pre><code>//从对方IP地址接收文件
+tftp -gr 文件名 对方IP地址
+
+//向对方IP地址发送文件
+tftp -pr 文件名 对方IP地址
+
+</code></pre>
+<p>把zImage和dtb从windows桌面传到开发板的/boot下,然后重启即生效,参考如下:</p>
+<p><img alt="图片-1.png" src="../imx6ull_using_wsl2_20.webp" /></p>
+<p>注:因为开发板又有emmc,又有sd卡,并且烧sd卡时需要先上电再拔卡,导致容易混乱,我是直接放弃使用sd卡,只使用emmc.</p>
+<h2 id="windowswsl2">在windows下浏览wsl2里的代码</h2>
+<p>通过ssh插件,操作如下:</p>
+<p><img alt="图片-2.png" src="../imx6ull_using_wsl2_30.webp" /></p></div>
             </div>
         </div>
 
