@@ -84,18 +84,18 @@
 <p>备注：下列路径是本人电脑的配置，实际使用请根据自己需要修改。</p>
 <h2 id="_1">开发环境</h2>
 <p>IMX6ULL CPU资源</p>
-<p><img alt="image.png" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/32c7f752f1854b65b6c87acadd3ea8a9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1878&amp;h=1619&amp;s=683323&amp;e=png&amp;b=fdfdfd" /></p>
+<p><img alt="image.png" src="../imx6ull_using_1_00.webp" /></p>
 <p>百问网100ask的imx6ull  PRO开发板的接口:
-<img alt="image.png" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/60b05f2701714d1fbb1037f08000d2f5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=949&amp;h=1227&amp;s=1276358&amp;e=png&amp;b=faf6f6" />
+<img alt="image.png" src="../imx6ull_using_1_10.webp" />
 开发板登录名是 root，无需密码</p>
 <p>J5插座作为摄像头用时:</p>
-<p><img alt="image.png" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/78cab74854b3431bb95b70f6ea233ea4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1379&amp;h=686&amp;s=223487&amp;e=png&amp;b=fffefe" />
+<p><img alt="image.png" src="../imx6ull_using_1_20.webp" />
 J5插座作为IO扩展时:</p>
-<p><img alt="image.png" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/940c30aea9ba4ea08ae75c53d8d295d4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=635&amp;h=448&amp;s=125020&amp;e=png&amp;b=fffefe" /></p>
+<p><img alt="image.png" src="../imx6ull_using_1_30.webp" /></p>
 <h3 id="windows">在windows+虚拟机环境下开发</h3>
 <h4 id="windows-a-usb">在windows +虚拟机环境下开发（参考《第四 A 章 使用 USB 网卡直连配置网络》）</h4>
 <p>//启动方式如下：
-<img alt="image" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9d6fe96bcc484cb5bde4ec1c251db3ca~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1431\&amp;h=742\&amp;s=289174\&amp;e=png\&amp;b=fefdfd" /></p>
+<img alt="image" src="../imx6ull_using_1_40.webp" /></p>
 <p>注意：这个拨码仅仅是uboot的启动，而uboot有可能启动的是sd卡（mmc=0），也考虑启动的是emmc（mmc=1），可以在uboot的环境变量中配置：</p>
 <pre><code>
 =&gt; printenv
@@ -180,13 +180,13 @@ console=ttymxc0,115200 root=/dev/mmcblk0p2 rootwait rw
 console=ttymxc0,115200 root=/dev/mmcblk1p2 rootwait rw
 </code></pre>
 <p>//调试环境如下：
-<img alt="image" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ca0d7a7fee4d47ee85172ddeba32faf6~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1491\&amp;h=813\&amp;s=756195\&amp;e=png\&amp;b=fcfbfb" /></p>
+<img alt="image" src="../imx6ull_using_1_50.webp" /></p>
 <p>虚拟机的配置类似如下：
-<img alt="image" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/326728aaed1a45cf9a423457095810c0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3000\&amp;h=1875\&amp;s=648429\&amp;e=png\&amp;b=2d0922" /></p>
+<img alt="image" src="../imx6ull_using_1_60.webp" /></p>
 <p>vscode使用ssh remote插件远程登陆vmware的代码：</p>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c526a1c6b821472596485efa2c5779d2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1353&#x26;h=2000&#x26;s=164404&#x26;e=png&#x26;b=fefefe" width="40%"></p>
+<p><img alt="image" src="../imx6ull_using_1_70.webp" /></p>
 <p>效果图：</p>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fcd682498b9a4a118c0b05f991678369~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2022&#x26;h=1395&#x26;s=261541&#x26;e=png&#x26;b=f7f7f7" width="40%"></p>
+<p><img alt="image" src="../imx6ull_using_1_80.webp" /></p>
 <p>//开发板配置:
 ifconfig eth0 192.168.5.9
 为了避免每次开机配置，可以：

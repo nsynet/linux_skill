@@ -99,7 +99,7 @@
 <p>&#x20;  现在linux开发环境一般比较复杂,以韦东山的imx6ull pro开发板为例,需要使用vmware运行虚拟机,然后打通 开发板&lt;-&gt;虚拟机&lt;-&gt;windows桌面这3者的互通,导致很复杂,本文通过wsl2编译镜像,去掉vmware环境,开发板只从windows桌面传递文件,减少环境的复杂性.开发板和windows桌面的连接是参考《嵌入式Linux应用开发完全手册V5.2_IMX6ULL_Pro开发板.pdf》的《第四 A 章 使用 USB 网卡直连配置网络》方法.</p>
 <h2 id="wsl2ubuntu-1804">安装wsl2的ubuntu 18.04版本</h2>
 <p>为了保持环境的一致性,还是需要安装ubuntu 18.04.我在微软store下载wsl的ubuntu18.04直接闪退,后来了解到在  <a href="https://link.zhihu.com/?target=https%3A//store.rg-adguard.net/">https://store.rg-adguard.net/</a> 可以下载商店的软件包,然后用如下 1\~4步,其中第4步是在powershell中安装下载的.appx的离线包:</p>
-<p><img alt="如何下载微软商店的软件.png" src="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/b4c2b16e04dd41b89232ec20b4c56461~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgZmVmamxzZGZkZnN4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTk0MzU5MjI4OTQ1MTg5NSJ9&amp;rk3s=f64ab15b&amp;x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&amp;x-orig-expires=1749290085&amp;x-orig-sign=535ENtRxLlO7WKQLlkWHe90Ob8w%3D" /></p>
+<p><img alt="如何下载微软商店的软件.png" src="../imx6ull_using_wsl2_00.webp" /></p>
 <p>```plain&#x20;text</p>
 <p>Add-AppxPackage -Path "C:\path\to\Ubuntu1804.appx"</p>
 <p>注意:将 C:\path\to\Ubuntu1804.appx 替换为实际下载路径。</p>
@@ -216,7 +216,7 @@ buildroot2020.02.x  
 <p>Usb otg口升级时,需要直连电脑,不能经过usb hub</p>
 </li>
 </ul>
-<p><img alt="图片.png" src="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/386dbe2497eb45b7a34b3b47f120abac~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgZmVmamxzZGZkZnN4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTk0MzU5MjI4OTQ1MTg5NSJ9&amp;rk3s=f64ab15b&amp;x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&amp;x-orig-expires=1749290085&amp;x-orig-sign=sCK8ldaEvi2G2FxDzJlTNJhYSrQ%3D" /></p>
+<p><img alt="图片.png" src="../imx6ull_using_wsl2_10.webp" /></p>
 <h2 id="zimagedtb">只升级zImage和dtb</h2>
 <p>使用tftp按照如下命令格式:</p>
 <pre><code>//从对方IP地址接收文件
@@ -227,11 +227,11 @@ tftp -pr 文件名 对方IP地址
 
 </code></pre>
 <p>把zImage和dtb从windows桌面传到开发板的/boot下,然后重启即生效,参考如下:</p>
-<p><img alt="图片-1.png" src="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/550a89c0c60347bd995fda5bf69145d2~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgZmVmamxzZGZkZnN4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTk0MzU5MjI4OTQ1MTg5NSJ9&amp;rk3s=f64ab15b&amp;x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&amp;x-orig-expires=1749290085&amp;x-orig-sign=yjvPMDFuQWQHFoetIaMV7Zoj2sc%3D" /></p>
+<p><img alt="图片-1.png" src="../imx6ull_using_wsl2_20.webp" /></p>
 <p>注:因为开发板又有emmc,又有sd卡,并且烧sd卡时需要先上电再拔卡,导致容易混乱,我是直接放弃使用sd卡,只使用emmc.</p>
 <h2 id="windowswsl2">在windows下浏览wsl2里的代码</h2>
 <p>通过ssh插件,操作如下:</p>
-<p><img alt="图片-2.png" src="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/ba4c0b9ed8f647099ee707449d03a1a1~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgZmVmamxzZGZkZnN4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTk0MzU5MjI4OTQ1MTg5NSJ9&amp;rk3s=f64ab15b&amp;x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&amp;x-orig-expires=1749290085&amp;x-orig-sign=G4NN8Uc4OkHZyHyhcLlCr7efDVE%3D" /></p></div>
+<p><img alt="图片-2.png" src="../imx6ull_using_wsl2_30.webp" /></p></div>
             </div>
         </div>
 
