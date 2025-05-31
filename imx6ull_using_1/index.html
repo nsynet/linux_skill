@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Imx6ull using 1 - Welcome to Novia Ni's page</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Welcome to Novia Ni's page</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../MkDocs_help/" class="nav-link">About MkDocs</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">开发环境</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">代码编译</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>[toc]</p>
+<p>备注：下列路径是本人电脑的配置，实际使用请根据自己需要修改。</p>
+<h2 id="_1">开发环境</h2>
+<p>IMX6ULL CPU资源</p>
+<p><img alt="image.png" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/32c7f752f1854b65b6c87acadd3ea8a9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1878&amp;h=1619&amp;s=683323&amp;e=png&amp;b=fdfdfd" /></p>
+<p>百问网100ask的imx6ull  PRO开发板的接口:
+<img alt="image.png" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/60b05f2701714d1fbb1037f08000d2f5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=949&amp;h=1227&amp;s=1276358&amp;e=png&amp;b=faf6f6" />
+开发板登录名是 root，无需密码</p>
+<p>J5插座作为摄像头用时:</p>
+<p><img alt="image.png" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/78cab74854b3431bb95b70f6ea233ea4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1379&amp;h=686&amp;s=223487&amp;e=png&amp;b=fffefe" />
+J5插座作为IO扩展时:</p>
+<p><img alt="image.png" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/940c30aea9ba4ea08ae75c53d8d295d4~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=635&amp;h=448&amp;s=125020&amp;e=png&amp;b=fffefe" /></p>
+<h3 id="windows">在windows+虚拟机环境下开发</h3>
+<h4 id="windows-a-usb">在windows +虚拟机环境下开发（参考《第四 A 章 使用 USB 网卡直连配置网络》）</h4>
+<p>//启动方式如下：
+<img alt="image" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9d6fe96bcc484cb5bde4ec1c251db3ca~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1431\&amp;h=742\&amp;s=289174\&amp;e=png\&amp;b=fefdfd" /></p>
+<p>注意：这个拨码仅仅是uboot的启动，而uboot有可能启动的是sd卡（mmc=0），也考虑启动的是emmc（mmc=1），可以在uboot的环境变量中配置：</p>
+<pre><code>
+=&gt; printenv
+baudrate=115200
+board_name=EVK
+board_rev=14X14
+boot_fdt=try
+......
+......
+mmcboot=echo Booting from mmc ...; run mmcargs; if test ${tee} = yes; then run loadfdt; run loadtee; bootm ${tee_addr} - ${fdt_addr}; else if test ${boot_fdt} = yes || test ${boot_fdt} = try; then if run loadfdt; then bootz ${loadaddr} - ${fdt_addr}; else if test ${boot_fdt} = try; then bootz; else echo WARN: Cannot load the DT; fi; fi; else bootz; fi; fi;
+mmcdev=1      //原始是mmc=1即emmc启动
+mmcpart=2
+mmcroot=/dev/mmcblk1p2 rootwait rw      //原始是mmc=1即emmc启动
+netargs=setenv bootargs console=${console},${baudrate} root=/dev/nfs ip=dhcp nfsroot=${serverip}:${nfsroot},v3,tcp
+......
+......
+
+Environment size: 2738/8188 bytes
+=&gt; setenv mmcdev 0      //改为mmc=0即sd卡启动
+=&gt; setenv mmcroot /dev/mmcblk0p2 rootwait rw      //改为mmc=0即sd卡启动
+=&gt; saveenv
+Saving Environment to MMC...
+Writing to MMC(0)... done
+=&gt;
+</code></pre>
+<p>从开机log可以看到到底是mmc=0即sd卡启动：</p>
+<pre><code>U-Boot 2017.03 (Oct 29 2022 - 21:06:24 -0400)
+
+CPU:   Freescale i.MX6ULL rev1.1 696 MHz (running at 396 MHz)
+CPU:   Industrial temperature grade (-40C to 105C) at 39C
+Reset cause: POR
+Model: Freescale i.MX6 ULL 14x14 EVK Board
+Board: MX6ULL 14x14 EVK
+DRAM:  512 MiB
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+Display: TFT7016 (1024x600)
+Video: 1024x600x24
+In:    serial
+Out:   serial
+Err:   serial
+Net:   No ethernet found.
+Normal Boot
+Hit any key to stop autoboot:  0
+## Error: &quot;findtee&quot; not defined
+switch to partitions #0, OK
+mmc0 is current device                    &lt;&lt;&lt;&lt;&lt;&lt;&lt;
+switch to partitions #0, OK
+mmc0 is current device                    &lt;&lt;&lt;&lt;&lt;&lt;&lt;
+
+</code></pre>
+<p>还是mmc=1即emmc启动：</p>
+<pre><code>U-Boot 2017.03 (Oct 29 2022 - 21:06:24 -0400)
+
+CPU:   Freescale i.MX6ULL rev1.1 696 MHz (running at 396 MHz)
+CPU:   Industrial temperature grade (-40C to 105C) at 42C
+Reset cause: POR
+Model: Freescale i.MX6 ULL 14x14 EVK Board
+Board: MX6ULL 14x14 EVK
+DRAM:  512 MiB
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+Display: TFT7016 (1024x600)
+Video: 1024x600x24
+In:    serial
+Out:   serial
+Err:   serial
+Net:   No ethernet found.
+Normal Boot
+Hit any key to stop autoboot:  0
+## Error: &quot;findtee&quot; not defined
+switch to partitions #0, OK
+mmc1(part 0) is current device                    &lt;&lt;&lt;&lt;&lt;&lt;&lt;
+switch to partitions #0, OK
+mmc1(part 0) is current device                    &lt;&lt;&lt;&lt;&lt;&lt;&lt;
+
+</code></pre>
+<p>或者在linux系统中查询,如下表示是启动的是sd卡的linux:</p>
+<pre><code>[root@imx6ull:~]# cat /proc/cmdline
+console=ttymxc0,115200 root=/dev/mmcblk0p2 rootwait rw
+</code></pre>
+<p>如下是启动的emmc的linux:</p>
+<pre><code>[root@100ask:~]# cat /proc/cmdline
+console=ttymxc0,115200 root=/dev/mmcblk1p2 rootwait rw
+</code></pre>
+<p>//调试环境如下：
+<img alt="image" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ca0d7a7fee4d47ee85172ddeba32faf6~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1491\&amp;h=813\&amp;s=756195\&amp;e=png\&amp;b=fcfbfb" /></p>
+<p>虚拟机的配置类似如下：
+<img alt="image" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/326728aaed1a45cf9a423457095810c0~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3000\&amp;h=1875\&amp;s=648429\&amp;e=png\&amp;b=2d0922" /></p>
+<p>vscode使用ssh remote插件远程登陆vmware的代码：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c526a1c6b821472596485efa2c5779d2~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1353&#x26;h=2000&#x26;s=164404&#x26;e=png&#x26;b=fefefe" width="40%"></p>
+<p>效果图：</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fcd682498b9a4a118c0b05f991678369~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2022&#x26;h=1395&#x26;s=261541&#x26;e=png&#x26;b=f7f7f7" width="40%"></p>
+<p>//开发板配置:
+ifconfig eth0 192.168.5.9
+为了避免每次开机配置，可以：
+设置 IP 为固定静态 IP（开机不变） 设置 eth0 为静态 IP 地址, 开发板/etc/network/目录下对
+interfaces 文件进行修改 。
+<code>[root@100ask:~]# vi /etc/network/interfaces</code>
+修改并为如下内容，执行 :wq 保存并退出，执行/etc/init.d/S40network restart 重启网络服务。</p>
+<pre><code>auto lo
+iface lo inet loopback
+auto eth0
+iface eth0 inet static
+    address 192.168.5.9
+    netmask 255.255.255.0
+    gateway 192.168.5.1
+</code></pre>
+<p>《4.4.1 文件系统内使用 nfs 挂载 ubuntu 目录》</p>
+<pre><code>[root@100ask:~]# mount -t nfs -o nolock,vers=3 192.168.5.11:/home/book/nfs_rootfs /mnt
+</code></pre>
+<h4 id="windows-b">在windows +虚拟机环境下开发（参考《第四 B 章 使用路由器配置网络》）</h4>
+<p>1.windows PC的wifi和路由器连接，比如获得IP是192.168.3.240.虚拟机使用“桥接模式-直接连接物理网络”，比如获得IP是192.168.3.10
+2.开发板启动wifi，可以直接执行如下start_wifi.sh的shell脚本：</p>
+<pre><code>#!/bin/bash
+#启用 wlan0 无线网络设备
+ifconfig wlan0 up
+#扫描周围网络设备
+#iw dev wlan0 scan |grep SSID
+#配置网络连接参数
+rm -rf /etc/wpa_supplicant.conf
+wpa_passphrase weiba1985 19560206 &gt;&gt; /etc/wpa_supplicant.conf
+#连接 wifi 设备
+wpa_supplicant -B -iwlan0 -c /etc/wpa_supplicant.conf
+#查看连接状态
+iw wlan0 link
+#为 wlan0 获取 ip 地址，确认与PC可以相互ping通
+udhcpc -i wlan0
+#查看所有网络设备
+ifconfig -a
+</code></pre>
+<p>比如获得路由器分配的IP是192.168.3.6
+3.用mobaxterm可以分别ssh连接到虚拟机和开发板的终端，在开发板的终端把虚拟机的文件系统加入mnt:
+<code>mount -t nfs -o nolock,vers=3 192.168.3.10:/home/book/nfs_rootfs /mnt</code></p>
+<h2 id="_2">代码编译</h2>
+<h3 id="_3">代码下载</h3>
+<p>执行以下4条命令，为方便大家复制，第3条是很长的命令，使用了\来换行，需要一并拷贝：</p>
+<pre><code>book@100ask:~ git clone https://e.coding.net/codebug8/repo.git
+book@100ask:~$ mkdir -p 100ask_imx6ull-sdk &amp;&amp; cd 100ask_imx6ull-sdk
+book@100ask:~/100ask_imx6ull-sdk$ ../repo/repo init -u \
+ https://gitee.com/weidongshan/manifests.git -b \
+linux-sdk -m imx6ull/100ask_imx6ull_linux4.9.88_release.xml  --no-repo-verify
+book@100ask:~/100ask_imx6ull-sdk$  ../repo/repo sync -j4
+</code></pre>
+<p>在 \~/.bashrc 的行尾添加如下：</p>
+<pre><code>export ARCH=arm
+export CROSS_COMPILE=arm-buildroot-linux-gnueabihf-
+export   PATH=$PATH:/home/book/100ask_imx6ull-sdk/ToolChain/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin
+</code></pre>
+<p>设置完毕后，要执行  source  \~/.bashrc 命令使其生效，</p>
+<h3 id="_4">应用程序的编译和执行</h3>
+<p>我们要想给 ARM 板编译出 hello 程序，需要使用交叉编译工具链，比如：</p>
+<pre><code>$ arm-buildroot-linux-gnueabihf-gcc -o hello hello.c
+</code></pre>
+<p>这样编译出来的 hello 程序才可以在 ARM 板子上运行。
+先把编译生成的 hello 文件拷贝到 Ubuntu nfs 服务目录下，备用：</p>
+<pre><code>$ cp  hello   /home/book/nfs_rootfs
+</code></pre>
+<h3 id="1nfs">调试开发板方法1：使用nfs方式</h3>
+<p>这种方式一般不自己从头开始编译busybox，只用于调试uboot+linux kernel+dts，文件系统即busybox不需要调整的场景。</p>
+<h4 id="uboot">uboot</h4>
+<pre><code>u-boot的编译过程如下(编译uboot前必须先配置好工具链等开发环境)：
+book@100ask: ~/100ask_imx6ull-sdk$ cd Uboot-2017.03
+book@100ask: ~/100ask_imx6ull-sdk/Uboot-2017.03$ make distclean
+book@100ask: ~/100ask_imx6ull-sdk/Uboot-2017.03$ make  mx6ull_14x14_evk_defconfig 
+book@100ask: ~/100ask_imx6ull-sdk/Uboot-2017.03$ make
+</code></pre>
+<p>编译后检查是否生效，需要看看开机时间戳是否改变了,如下：</p>
+<pre><code>U-Boot 2017.03 (Oct 29 2022 - 21:06:24 -0400)
+</code></pre>
+<h4 id="linuxdts">LINUX内核+dts</h4>
+<p>为了防止编译没有生效，除了留意打印的编译时间戳，还可以修改一些标记处，烧入单板时检查标记是否生效了，比如kernel顶层Makefile的：</p>
+<pre><code>VERSION = 4
+PATCHLEVEL = 9
+SUBLEVEL = 88
+EXTRAVERSION = 20221029_by_nishengyue        &lt;------  增加标记
+</code></pre>
+<p>烧入单板后应该有类似的打印，说明编译真正生效了：</p>
+<pre><code>[  0.000000] Booting Linux on physical CPU 0x0
+[  0.000000] Linux version 4.9.8820221029_by_nishengyue (book@100ask) (gcc version 7.5.0 (Buildroot 2020.02-gee85cab) ) #1 SMP PREEMPT Sun Oct 30 11:46:38 CST 2022
+</code></pre>
+<p>在
+<code>~/100ask_imx6ull-sdk/Linux-4.9.88</code>
+路径下，kernel的编译过程如下（编译内核前需要先配置好工具链等一些环境变量）：</p>
+<pre><code>make mrproper
+make 100ask_imx6ull_defconfig
+make zImage  -j4
+make dtbs V=1
+cp arch/arm/boot/zImage ~/nfs_rootfs
+cp arch/arm/boot/dts/100ask_imx6ull-14x14.dtb  ~/nfs_rootfs
+</code></pre>
+<p>如果出现    multiple definition of `yylloc`  报错，请参考该链接解决：<a href="https://blog.csdn.net/qq_36393978/article/details/117695708" title="https://blog.csdn.net/qq_36393978/article/details/117695708">https://blog.csdn.net/qq_36393978/article/details/117695708 </a></p>
+<p>这样在nfs_rootfs 能看到zImage和100ask_imx6ull-14x14.dtb 文件。</p>
+<h4 id="module">编译内核MODULE</h4>
+<pre><code>book@b ook-virtual-machine:~$ cd ~/100ask_imx6ull-sdk/Linux-4.9.88/
+book@100ask:~/100ask_imx6ull-sdk/Linux-4.9.88$ make ARCH=arm CROSS_COMPILE=arm-buildroot-linux-
+gnueabihf- modules
+</code></pre>
+<p>安装内核module执行以下命令：</p>
+<pre><code>book@book-virtual-machine:~$ cd ~/100ask_imx6ull-sdk/Linux-4.9.88/
+book@100ask:~/100ask_imx6ull-sdk/Linux-4.9.88$   sudo   make     ARCH=arm   INSTALL_MOD_PATH=/home/book/nfs_rootfs/ modules_install
+</code></pre>
+<p>这样在 nfs_rootfs 能看到 lib 文件夹。</p>
+<h4 id="module_1">安装编译的内核+设备树+module</h4>
+<p>执行命令拷贝：</p>
+<pre><code>cp  /mnt/zImage  /boot
+cp  /mnt/*.dtb   /boot
+cp  /mnt/lib/modules  /lib  -rfd
+</code></pre>
+<h4 id="ubootnfs">uboot从nfs网络启动</h4>
+<p>1.编译的结果拷贝到nfs目录下：</p>
+<pre><code>book@100ask:~/100ask_imx6ull-sdk/Buildroot_2020.02.x/output/images$ cp zImage  ~/nfs_rootfs/
+book@100ask:~/100ask_imx6ull-sdk/Buildroot_2020.02.x/output/images$ cp 100ask_imx6ull-14x14.dtb  ~/nfs_rootfs/
+book@100ask:~/100ask_imx6ull-sdk/Buildroot_2020.02.x/output/images$ cp -rf  rootfs.tar.bz2  ~/nfs_rootfs/
+book@100ask:~/100ask_imx6ull-sdk/Buildroot_2020.02.x/output/images$ cd ~/nfs_rootfs
+book@100ask:~/nfs_rootfs$ sudo tar  xjf  rootfs.tar.bz2
+</code></pre>
+<p>2.ubuntu开启tftp:
+在 Ubuntu 中执行以下命令安装 TFTP 服务：</p>
+<pre><code>sudo apt-get install tftp-hpa tftpd-hpa
+</code></pre>
+<p>然后，创建 TFTP 服务器工作目录，并打开 TFTP 服务配置文件，如下:</p>
+<pre><code>sudo vim /etc/default/tftpd-hpa
+</code></pre>
+<p>在配置文件/etc/default/tftpd-hpa 中，添加以下字段：</p>
+<pre><code>TFTP_DIRECTORY="/home/book/nfs_rootfs" 
+TFTP_OPTIONS="-l  -c  -s"
+</code></pre>
+<p>最后，重启 TFTP 服务:</p>
+<pre><code>sudo service tftpd-hpa restart
+</code></pre>
+<p>查看 tftp 服务是否在运行,运行如下命令，即可查看是否在后台运行。</p>
+<pre><code>ps -aux | grep "tftp"
+</code></pre>
+<p>3.ubooot阶段启动停住后，输入如下：</p>
+<pre><code>=&gt; setenv serverip 192.168.5.11     //设置服务器的 IP 地址，这里指的是 Ubuntu 主机 IP 
+=&gt; setenv ipaddr 192.168.5.9         //设置开发板的 IP 地址。 
+=&gt; ping 192.168.5.11     //检查是否能ping通
+=&gt; setenv nfsroot /home/book/nfs_rootfs   //设置 nfs 文件系统所在目录。 
+=&gt; run netboot            //设置完成后，运行网络启动系统命令
+</code></pre>
+<h3 id="2buildroot">调试开发板方法2：使用编译buildroot套件并烧录进单板</h3>
+<p>这种方式一般可以一次性编译uboot+linux kernel+dts+文件系统busybox，操作简单长，但是如果全编译时间长。</p>
+<h4 id="buildroot">buildroot套件的全编译</h4>
+<p>下面以100ask_imx6ull_pro_ddr512m_systemV_qt5_defconfig配置文件为例，在ubuntu终端上说明 Buildroot 的配置过程,在
+<code>~/100ask_imx6ull-sdk/Buildroot_2020.02.x</code>
+路径下：</p>
+<pre><code>make clean
+make 100ask_imx6ull_pro_ddr512m_systemV_qt5_defconfig
+make all
+</code></pre>
+<p>注：其中buildroot支持的配置如下：</p>
+<pre><code>book@100ask:~/100ask_imx6ull-sdk/Buildroot_2020.02.x$  make list-defconfigs
+Built-in configs:
+  100ask_imx6ull_mini_ddr512m_systemV_core_defconfig - Build for 100ask_imx6ull_mini_ddr512m_systemV_core
+  100ask_imx6ull_mini_ddr512m_systemV_qt5_defconfig - Build for 100ask_imx6ull_mini_ddr512m_systemV_qt5
+  100ask_imx6ull_pro_ddr512m_systemV_core_defconfig - Build for 100ask_imx6ull_pro_ddr512m_systemV_core
+  100ask_imx6ull_pro_ddr512m_systemV_qt5_defconfig - Build for 100ask_imx6ull_pro_ddr512m_systemV_qt5
+  100ask_stm32mp157_pro_ddr512m_busybox_core_defconfig - Build for 100ask_stm32mp157_pro_ddr512m_busybox_core
+....
+  qemu_aarch64_virt_defconfig         - Build for qemu_aarch64_virt
+  qemu_arm_versatile_defconfig        - Build for qemu_arm_versatile
+  qemu_arm_versatile_nommu_defconfig  - Build for qemu_arm_versatile_nommu
+  qemu_arm_vexpress_defconfig         - Build for qemu_arm_vexpress
+  qemu_arm_vexpress_tz_defconfig      - Build for qemu_arm_vexpress_tz
+......
+  raspberrypi0_defconfig              - Build for raspberrypi0
+  raspberrypi0w_defconfig             - Build for raspberrypi0w
+  raspberrypi2_defconfig              - Build for raspberrypi2
+  raspberrypi3_64_defconfig           - Build for raspberrypi3_64
+  raspberrypi3_defconfig              - Build for raspberrypi3
+  raspberrypi3_qt5we_defconfig        - Build for raspberrypi3_qt5we
+  raspberrypi4_64_defconfig           - Build for raspberrypi4_64
+  raspberrypi4_defconfig              - Build for raspberrypi4
+  raspberrypi_defconfig               - Build for raspberrypi
+  .......
+</code></pre>
+<h4 id="buildroot-menuconfig">在 buildroot 下进入 menuconfig 包选择配置配置界面</h4>
+<pre><code>book@100ask: ~/100ask_imx6ull-sdk/Buildroot_2020.02.x$ make menuconfig
+</code></pre>
+<h4 id="buildroot-u-boot">buildroot 下单独编译 u-boot</h4>
+<pre><code>book@100ask: ~/100ask_imx6ull-sdk/Buildroot_2020.02.x$ make uboot-rebuild
+</code></pre>
+<h4 id="buildroot-dts">buildroot 下单独编译内核+dts</h4>
+<p>在
+<code>book@100ask:~/100ask_imx6ull-sdk/Buildroot_2020.02.x/dl/linux/git</code>
+路径下</p>
+<pre><code>find . -iname *.o|xargs rm -rf *.o
+make mrproper
+make 100ask_imx6ull_defconfig
+make zImage  -j4
+make dtbs
+cp arch/arm/boot/zImage  /home/book/100ask_imx6ull-sdk/Buildroot_2020.02.x/output/images/
+cp arch/arm/boot/dts/100ask_imx6ull-14x14.dtb  /home/book/100ask_imx6ull-sdk/Buildroot_2020.02.x/output/images/
+</code></pre>
+<p>//nisy：这个zImage是真正重编译的，但是buildroot的sdcard.img 的kernel没有重新编译，如何解决？</p>
+<pre><code>book@100ask: ~/100ask_imx6ull-sdk/Buildroot_2020.02.x$ make linux-rebuild    //存疑，似乎仅仅是重新打包了zImage
+</code></pre>
+<h4 id="buildroot-make-menuconfig">buildroot 下进入内核 make menuconfig 配置选项界面</h4>
+<pre><code>book@100ask: ~/100ask_imx6ull-sdk/Buildroot_2020.02.x$ make linux-menuconfig
+</code></pre>
+<h4 id="buildroot_1">buildroot 下单独编译某个软件包</h4>
+<pre><code>book@100ask: ~/100ask_imx6ull-sdk/Buildroot_2020.02.x$ make &lt;pkg&gt;-rebuild
+</code></pre>
+<h4 id="buildroot-busybox">buildroot 下进入 busybox 配置界面</h4>
+<pre><code>book@100ask: ~/100ask_imx6ull-sdk/Buildroot_2020.02.x$ make busybox-menuconfig
+</code></pre>
+<p>buildroot 下生成系统 sdk,最后生成的目录在 output/images/目录下</p>
+<pre><code>book@100ask: ~/100ask_imx6ull-sdk/Buildroot_2020.02.x$ make sdk
+</code></pre>
+<h4 id="buildroot_2">buildroot 下检查文件系统是否真正重编译</h4>
+<p>可以在这个文件中做标记：</p>
+<pre><code>vi /home/book/100ask_imx6ull-sdk/Buildroot_2020.02.x/board/100ask/nxp-imx6ull/rootfs-overlay/systemV/etc/issue
+</code></pre>
+<p>烧入单板后，检查登陆后，是否有自己标记的字符串。</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
