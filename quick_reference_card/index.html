@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Quick reference card - Welcome to Novia Ni's page</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Welcome to Novia Ni's page</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../MkDocs_help/" class="nav-link">About MkDocs</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#docker" class="nav-link">Docker 常用命令快速参考卡片 📦</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#wsl-windows-subsystem-for-linux" class="nav-link">WSL (Windows Subsystem for Linux) 常用命令快速参考卡片 🐧🔧</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#git" class="nav-link">Git 常用命令快速参考卡片</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="toc">
+<ul>
+<li><a href="#docker">Docker 常用命令快速参考卡片 📦</a><ul>
+<li><a href="#_1">容器生命周期管理</a></li>
+<li><a href="#_2">容器操作</a></li>
+<li><a href="#_3">镜像管理</a></li>
+<li><a href="#_4">网络管理</a></li>
+<li><a href="#_5">数据卷管理</a></li>
+<li><a href="#_6">其他实用命令</a></li>
+</ul>
+</li>
+<li><a href="#wsl-windows-subsystem-for-linux">WSL (Windows Subsystem for Linux) 常用命令快速参考卡片 🐧🔧</a><ul>
+<li><a href="#_7">生命周期管理</a></li>
+<li><a href="#_8">发行版管理</a></li>
+<li><a href="#_9">配置管理</a></li>
+<li><a href="#_10">文件系统交互</a></li>
+<li><a href="#_11">网络与性能</a></li>
+<li><a href="#_12">备份与恢复</a></li>
+<li><a href="#_13">实用技巧</a></li>
+</ul>
+</li>
+<li><a href="#git">Git 常用命令快速参考卡片</a><ul>
+<li><a href="#_14">基础配置</a></li>
+<li><a href="#_15">仓库操作</a></li>
+<li><a href="#_16">提交与修改</a></li>
+<li><a href="#_17">分支管理</a></li>
+<li><a href="#_18">远程协作</a></li>
+<li><a href="#_19">撤销与回退</a></li>
+<li><a href="#_20">日志与历史</a></li>
+<li><a href="#_21">标签管理</a></li>
+<li><a href="#_22">实用技巧</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="docker">Docker 常用命令快速参考卡片 📦</h1>
+<hr />
+<h4 id="_1"><strong>容器生命周期管理</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>docker run [选项] 镜像</code></td>
+<td style="text-align: left;">创建并启动容器</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker start/stop/restart 容器</code></td>
+<td style="text-align: left;">启动/停止/重启容器</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker rm 容器</code></td>
+<td style="text-align: left;">删除容器（<code>-f</code> 强制删除运行中的容器）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker pause/unpause 容器</code></td>
+<td style="text-align: left;">暂停/恢复容器进程</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker update 容器</code></td>
+<td style="text-align: left;">更新容器的资源限制（如 CPU/内存）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>常用 <code>run</code></strong>** 选项**：</p>
+<ul>
+<li><code>-d</code> 后台运行</li>
+<li><code>--name 名称</code> 指定容器名称</li>
+<li><code>-p 宿主机端口:容器端口</code> 端口映射</li>
+<li><code>-v 宿主机路径:容器路径</code> 挂载数据卷</li>
+<li><code>-e 变量=值</code> 设置环境变量</li>
+<li><code>--network 网络</code> 指定容器网络</li>
+<li><code>-it</code> 启动交互式终端（通常与 <code>/bin/bash</code> 结合）</li>
+</ul>
+<hr />
+<h4 id="_2"><strong>容器操作</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>docker ps</code></td>
+<td style="text-align: left;">查看运行中的容器（<code>-a</code> 显示所有）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker logs 容器</code></td>
+<td style="text-align: left;">查看日志（<code>-f</code> 实时跟踪）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker exec [选项] 容器 命令</code></td>
+<td style="text-align: left;">在容器内执行命令（如 <code>-it /bin/bash</code> 进入终端）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker inspect 容器</code></td>
+<td style="text-align: left;">查看容器详细信息（JSON 格式）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker stats</code></td>
+<td style="text-align: left;">实时监控容器资源使用（CPU/内存）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker cp 容器:路径 宿主机路径</code></td>
+<td style="text-align: left;">从容器复制文件到宿主机（反向同理）</td>
+</tr>
+<tr>
+<td style="text-align: left;">docker stop &lt;容器名或容器ID&gt;</td>
+<td style="text-align: left;">向容器发送 <code>SIGTERM</code> 信号，允许容器优雅终止（保存数据、清理资源）</td>
+</tr>
+<tr>
+<td style="text-align: left;">docker kill &lt;容器名或容器ID&gt;</td>
+<td style="text-align: left;">直接向容器发送 <code>SIGKILL</code> 信号，立即终止容器进程（适用于无响应的情况）</td>
+</tr>
+<tr>
+<td style="text-align: left;">docker rm -f &lt;容器名或容器ID&gt;</td>
+<td style="text-align: left;">彻底清理容器（停止并删除）</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_3"><strong>镜像管理</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>docker images</code></td>
+<td style="text-align: left;">列出本地镜像</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker rmi 镜像</code></td>
+<td style="text-align: left;">删除镜像（<code>-f</code> 强制删除）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker pull 镜像:标签</code></td>
+<td style="text-align: left;">拉取镜像（默认标签 <code>latest</code>）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker push 镜像:标签</code></td>
+<td style="text-align: left;">推送镜像到仓库</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker build -t 名称:标签 路径</code></td>
+<td style="text-align: left;">构建镜像（<code>-f</code> 指定 Dockerfile 路径）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker tag 旧镜像 新镜像:标签</code></td>
+<td style="text-align: left;">为镜像打标签</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker save -o 文件名.tar 镜像</code></td>
+<td style="text-align: left;">导出镜像为文件</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker load -i 文件名.tar</code></td>
+<td style="text-align: left;">从文件导入镜像</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_4"><strong>网络管理</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>docker network ls</code></td>
+<td style="text-align: left;">列出所有网络</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker network create 网络名</code></td>
+<td style="text-align: left;">创建自定义网络</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker network inspect 网络</code></td>
+<td style="text-align: left;">查看网络详细信息</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker network connect 网络 容器</code></td>
+<td style="text-align: left;">将容器连接到网络</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker network disconnect 网络 容器</code></td>
+<td style="text-align: left;">断开容器与网络的连接</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_5"><strong>数据卷管理</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>docker volume create 卷名</code></td>
+<td style="text-align: left;">创建数据卷</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker volume ls</code></td>
+<td style="text-align: left;">列出所有数据卷</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker volume inspect 卷名</code></td>
+<td style="text-align: left;">查看卷详细信息</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker volume rm 卷名</code></td>
+<td style="text-align: left;">删除数据卷</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_6"><strong>其他实用命令</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>docker version</code></td>
+<td style="text-align: left;">查看 Docker 版本</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker info</code></td>
+<td style="text-align: left;">显示 Docker 系统信息</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker login</code></td>
+<td style="text-align: left;">登录镜像仓库（如 Docker Hub）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker search 关键词</code></td>
+<td style="text-align: left;">搜索镜像仓库</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker system df</code></td>
+<td style="text-align: left;">查看 Docker 磁盘使用</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>docker system prune</code></td>
+<td style="text-align: left;">清理无用数据（镜像/容器/网络/缓存）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>小贴士</strong>：</p>
+<ul>
+<li>使用 <code>--help</code> 查看命令帮助（如 <code>docker run --help</code>）。</li>
+<li>组合命令示例：<code>docker run -d --name web -p 80:80 -v /data:/app nginx:alpine</code></li>
+</ul>
+<p>保存这张卡片，快速查阅 Docker 核心命令！</p>
+<h1 id="wsl-windows-subsystem-for-linux">WSL (Windows Subsystem for Linux) 常用命令快速参考卡片 🐧🔧</h1>
+<hr />
+<h4 id="_7"><strong>生命周期管理</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>wsl --install</code></td>
+<td style="text-align: left;">安装 WSL（默认安装 Ubuntu）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wsl --shutdown</code></td>
+<td style="text-align: left;">强制关闭所有 WSL 发行版和虚拟机</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wsl --terminate &lt;发行版名&gt;</code></td>
+<td style="text-align: left;">终止指定发行版</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wsl --status</code></td>
+<td style="text-align: left;">查看 WSL 状态（版本、默认发行版等）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_8"><strong>发行版管理</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>wsl --list</code> 或 <code>wsl -l</code></td>
+<td style="text-align: left;">列出已安装的发行版（<code>-v</code> 显示详细信息）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wsl --set-default &lt;发行版名&gt;</code></td>
+<td style="text-align: left;">设置默认启动的发行版</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wsl --set-version &lt;发行版名&gt; 2</code></td>
+<td style="text-align: left;">将发行版升级到 WSL 2</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wsl --unregister &lt;发行版名&gt;</code></td>
+<td style="text-align: left;">注销并删除发行版（删除数据）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wsl --export &lt;发行版名&gt; 文件名.tar</code></td>
+<td style="text-align: left;">导出发行版为备份文件</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wsl --import &lt;发行版名&gt; 安装路径 文件名.tar</code></td>
+<td style="text-align: left;">从备份文件导入发行版</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_9"><strong>配置管理</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>wsl --update</code></td>
+<td style="text-align: left;">更新 WSL 内核</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wsl --version</code></td>
+<td style="text-align: left;">查看 WSL 版本信息</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wsl -d &lt;发行版名&gt;</code></td>
+<td style="text-align: left;">启动指定发行版（例如 <code>wsl -d Ubuntu-22.04</code>）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wsl.conf</code> 配置文件</td>
+<td style="text-align: left;">路径：<code>/etc/wsl.conf</code>（用于配置默认用户、网络等）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_10"><strong>文件系统交互</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>\\wsl$\&lt;发行版名&gt;</code></td>
+<td style="text-align: left;">在 Windows 资源管理器中访问 WSL 文件系统</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wsl --cd &lt;目录&gt;</code></td>
+<td style="text-align: left;">在 WSL 中直接切换到指定目录（Windows 路径自动转换）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wsl &lt;Windows命令&gt;</code></td>
+<td style="text-align: left;">从 WSL 中调用 Windows 命令（如 <code>wsl calc</code> 打开计算器）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;Linux命令&gt;</code></td>
+<td style="text-align: left;">从 Windows 命令行直接运行 Linux 命令（如 <code>wsl ls -l</code>）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_11"><strong>网络与性能</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令/配置</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ip addr show eth0</code></td>
+<td style="text-align: left;">查看 WSL 2 的 IP 地址（默认 NAT 网络）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wsl.conf</code> 中的 <code>[network]</code></td>
+<td style="text-align: left;">配置 DNS、生成 hosts 文件等</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>localhost</code></td>
+<td style="text-align: left;">在 Windows 中通过 <code>localhost</code> 访问 WSL 服务（WSL 2 需端口转发）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>netsh interface portproxy</code></td>
+<td style="text-align: left;">Windows 端口转发命令（用于 WSL 2 网络访问）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_12"><strong>备份与恢复</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">导出发行版</td>
+<td style="text-align: left;"><code>wsl --export Ubuntu-22.04 ubuntu_backup.tar</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">导入发行版</td>
+<td style="text-align: left;"><code>wsl --import NewUbuntu C:\wsl\new_ubuntu ubuntu_backup.tar</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">备份根目录</td>
+<td style="text-align: left;"><code>tar -zcvf wsl_backup.tar.gz /</code>（在 WSL 中执行）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_13"><strong>实用技巧</strong></h4>
+<ol>
+<li><strong>快速启动默认发行版</strong>：直接运行 <code>wsl</code> 或 <code>bash</code>（需默认配置）。</li>
+<li>
+<p><strong>切换默认用户</strong>：</p>
+<ol>
+<li><code>echo -e "[user]\ndefault=新用户名" | sudo tee /etc/wsl.conf</code></li>
+<li>
+<p><strong>限制 WSL 2 内存/CPU</strong>：在 <code>%USERPROFILE%\.wslconfig</code> 中添加：</p>
+</li>
+<li>
+<p><code>[wsl2] memory=4GB # 限制内存 processors=2 # 限制 CPU 核心</code></p>
+</li>
+<li><strong>关闭 WSL 虚拟机</strong>：<code>wsl --shutdown</code>（释放资源）。</li>
+</ol>
+</li>
+</ol>
+<hr />
+<p><strong>小贴士</strong>：</p>
+<ul>
+<li>使用 <code>wsl --help</code> 查看完整命令帮助。</li>
+<li>
+<p>WSL 1 和 WSL 2 的区别：</p>
+<ul>
+<li><strong>WSL 1</strong>：轻量级兼容层，直接翻译 Linux 系统调用。</li>
+<li><strong>WSL 2</strong>：基于 Hyper-V 的完整 Linux 内核，性能更高（推荐用于 Docker 等场景）。</li>
+</ul>
+</li>
+</ul>
+<p>保存这张卡片，轻松管理你的 Windows + Linux 混合开发环境！</p>
+<h1 id="git">Git 常用命令快速参考卡片</h1>
+<hr />
+<h4 id="_14"><strong>基础配置</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>git config --global user.name "名字"</code></td>
+<td style="text-align: left;">设置全局用户名</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git config --global user.email "邮箱"</code></td>
+<td style="text-align: left;">设置全局邮箱</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git config --list</code></td>
+<td style="text-align: left;">查看所有配置项</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_15"><strong>仓库操作</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>git init</code></td>
+<td style="text-align: left;">初始化新仓库</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git clone &lt;仓库地址&gt;</code></td>
+<td style="text-align: left;">克隆远程仓库到本地</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git remote add &lt;别名&gt; &lt;仓库地址&gt;</code></td>
+<td style="text-align: left;">添加远程仓库别名（如 <code>origin</code>）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git remote -v</code></td>
+<td style="text-align: left;">查看远程仓库地址</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_16"><strong>提交与修改</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>git status</code></td>
+<td style="text-align: left;">查看工作区状态</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git add &lt;文件&gt;</code></td>
+<td style="text-align: left;">将文件添加到暂存区（<code>git add .</code> 添加所有）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git commit -m "消息"</code></td>
+<td style="text-align: left;">提交暂存区内容（<code>-a</code> 跳过 <code>git add</code>）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git diff</code></td>
+<td style="text-align: left;">查看未暂存的改动</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git diff --staged</code></td>
+<td style="text-align: left;">查看已暂存的改动</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git restore &lt;文件&gt;</code></td>
+<td style="text-align: left;">丢弃工作区未暂存的修改（Git 2.23+）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git restore --staged &lt;文件&gt;</code></td>
+<td style="text-align: left;">从暂存区移除文件（保留工作区修改）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_17"><strong>分支管理</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>git branch</code></td>
+<td style="text-align: left;">查看本地分支（<code>-a</code> 查看所有分支）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git branch &lt;分支名&gt;</code></td>
+<td style="text-align: left;">创建新分支</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git checkout &lt;分支名&gt;</code></td>
+<td style="text-align: left;">切换分支</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git checkout -b &lt;新分支名&gt;</code></td>
+<td style="text-align: left;">创建并切换到新分支</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git merge &lt;分支名&gt;</code></td>
+<td style="text-align: left;">合并指定分支到当前分支</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git branch -d &lt;分支名&gt;</code></td>
+<td style="text-align: left;">删除分支（<code>-D</code> 强制删除未合并分支）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_18"><strong>远程协作</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>git push &lt;远程名&gt; &lt;分支名&gt;</code></td>
+<td style="text-align: left;">推送本地分支到远程（如 <code>git push origin main</code>）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git pull &lt;远程名&gt; &lt;分支名&gt;</code></td>
+<td style="text-align: left;">拉取远程分支并合并（等价于 <code>git fetch</code> + <code>git merge</code>）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git fetch &lt;远程名&gt;</code></td>
+<td style="text-align: left;">下载远程仓库最新内容（不自动合并）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git push --set-upstream &lt;远程名&gt; &lt;分支名&gt;</code></td>
+<td style="text-align: left;">推送并关联远程分支（首次推送时使用）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_19"><strong>撤销与回退</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>git reset HEAD~1</code></td>
+<td style="text-align: left;">回退到上一次提交（保留工作区修改，<code>--soft</code> 保留暂存区）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git reset --hard HEAD~1</code></td>
+<td style="text-align: left;">彻底回退到上一次提交（丢弃所有修改）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git revert &lt;提交哈希&gt;</code></td>
+<td style="text-align: left;">撤销指定提交（生成新提交记录）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git stash</code></td>
+<td style="text-align: left;">储藏当前未提交的修改（<code>pop</code> 恢复，<code>list</code> 查看列表）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_20"><strong>日志与历史</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>git log</code></td>
+<td style="text-align: left;">查看提交历史（<code>--oneline</code> 简洁模式，<code>--graph</code> 图形化分支）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git log -p &lt;文件&gt;</code></td>
+<td style="text-align: left;">查看文件的详细修改历史</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git blame &lt;文件&gt;</code></td>
+<td style="text-align: left;">逐行显示文件修改人（<code>-L 10,20</code> 查看指定行数）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git show &lt;提交哈希&gt;</code></td>
+<td style="text-align: left;">查看某次提交的详细内容</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_21"><strong>标签管理</strong></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">命令</th>
+<th style="text-align: left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>git tag</code></td>
+<td style="text-align: left;">查看所有标签</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git tag &lt;标签名&gt;</code></td>
+<td style="text-align: left;">创建轻量标签（<code>-a</code> 创建含注释的标签）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git push &lt;远程名&gt; &lt;标签名&gt;</code></td>
+<td style="text-align: left;">推送标签到远程仓库（<code>--tags</code> 推送所有标签）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>git tag -d &lt;标签名&gt;</code></td>
+<td style="text-align: left;">删除本地标签</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_22"><strong>实用技巧</strong></h4>
+<ol>
+<li><strong>忽略文件</strong>：创建 <code>.gitignore</code> 文件，定义需要忽略的文件/目录（如 <code>*.log</code>, <code>/build/</code>）。</li>
+<li>
+<p><strong>别名简化命令</strong>：</p>
+<ol>
+<li><code>git config --global alias.co checkout # 用 `git co` 代替 `git checkout` git config --global alias.br branch # 用 `git br` 代替 `git branch`</code></li>
+<li>
+<p><strong>查找提交</strong>：</p>
+</li>
+<li>
+<p><code>git log --grep="关键词" # 按提交消息搜索 git log -S"函数名" # 按代码内容搜索</code></p>
+</li>
+</ol>
+</li>
+</ol>
+<hr />
+<p><strong>常用组合命令示例</strong>：</p>
+<pre><code># 1. 提交并推送到远程分支
+git add .
+git commit -m "更新功能"
+git push origin main
+
+# 2. 合并分支并解决冲突
+git checkout main
+git merge feature-branch
+# 解决冲突后提交
+git add .
+git commit -m "合并feature分支"
+git push
+
+# 3. 临时切换任务（储藏修改）
+git stash
+git checkout hotfix-branch
+# 修复后回到原分支
+git checkout feature-branch
+git stash pop
+</code></pre>
+<hr />
+<p><strong>小贴士</strong>：</p>
+<ul>
+<li>使用 <code>git help &lt;命令&gt;</code> 查看详细帮助（如 <code>git help reset</code>）。</li>
+<li>提交消息遵循清晰规范（如 <a href="https://www.conventionalcommits.org/">Conventional Commits</a>）。</li>
+</ul>
+<p>保存这张卡片，轻松驾驭 Git 版本控制！ 🛠️🐙</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

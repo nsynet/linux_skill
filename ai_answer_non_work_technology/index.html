@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Ai answer non work technology - Welcome to Novia Ni's page</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Welcome to Novia Ni's page</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../MkDocs_help/" class="nav-link">About MkDocs</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#qpicozero" class="nav-link">Q:树莓派pico和zero的区别?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#q" class="nav-link">Q:有什么开发板可以当调试工具？</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#qpicostm32esp32" class="nav-link">Q:树莓派pico和常用的单片机芯片如stm32,esp32,有哪些优劣势?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#qmodbuscan" class="nav-link">Q\:modbus和can总线的关系，如何选择？</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#qexcel" class="nav-link">Q\:excel中格式刷如何快速应用到一行或者一列,不需要鼠标拖动?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#qexcel_1" class="nav-link">Q\:excel把一列使用相同公式时,需要按住鼠标往下拖,有更方便的方法吗</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#qadafruit" class="nav-link">Q:有哪些类似Adafruit的公司,它们开源的哪些嵌入式开发库</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#q_1" class="nav-link">Q:常见智驾车的算力</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#q-dockerhypervisor" class="nav-link">Q: docker在嵌入式系统能替代hypervisor吗</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#rt-threadesp32" class="nav-link">rt-thread支持esp32吗</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#html-10html" class="nav-link">列表说明html 1.0到最新html 版本的区别</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#docearpdf" class="nav-link">有哪些类似docear那样能提取所有pdf文档的批注,集中在一起阅读的工具软件</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#uartdmauart" class="nav-link">单片机与外设通过UART等通信，如何通过dma避免单片机主动查询UART</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#qopenwrt" class="nav-link">Q:路由器上的OpenWrt有哪些常用的软件包</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#qyoctoadbfastboot" class="nav-link">&#x20;Q\:yocto的编译版本中如何加入adb和fastboot功能</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<div class="toc">
+<ul>
+<li><a href="#qpicozero">Q:树莓派pico和zero的区别?</a></li>
+<li><a href="#q">Q:有什么开发板可以当调试工具？</a></li>
+<li><a href="#qpicostm32esp32">Q:树莓派pico和常用的单片机芯片如stm32,esp32,有哪些优劣势?</a></li>
+<li><a href="#qmodbuscan">Q\:modbus和can总线的关系，如何选择？</a></li>
+<li><a href="#qexcel">Q\:excel中格式刷如何快速应用到一行或者一列,不需要鼠标拖动?</a></li>
+<li><a href="#qexcel_1">Q\:excel把一列使用相同公式时,需要按住鼠标往下拖,有更方便的方法吗</a></li>
+<li><a href="#qadafruit">Q:有哪些类似Adafruit的公司,它们开源的哪些嵌入式开发库</a></li>
+<li><a href="#q_1">Q:常见智驾车的算力</a></li>
+<li><a href="#q-dockerhypervisor">Q: docker在嵌入式系统能替代hypervisor吗</a></li>
+<li><a href="#rt-threadesp32">rt-thread支持esp32吗</a><ul>
+<li><a href="#1-bsp">1. 硬件支持与BSP</a></li>
+<li><a href="#2">2. 开发环境与工具链</a></li>
+<li><a href="#3-freertos">3. FreeRTOS 兼容层</a></li>
+<li><a href="#4">4. 功能特性与生态整合</a></li>
+<li><a href="#5">5. 社区与持续集成</a></li>
+<li><a href="#_1">总结</a></li>
+</ul>
+</li>
+<li><a href="#html-10html">列表说明html 1.0到最新html 版本的区别</a><ul>
+<li><a href="#1-html-101993">1. HTML 1.0（1993年）</a></li>
+<li><a href="#2-html-201995">2. HTML 2.0（1995年）</a></li>
+<li><a href="#3-html-321997">3. HTML 3.2（1997年）</a></li>
+<li><a href="#4-html-4011999">4. HTML 4.01（1999年）</a></li>
+<li><a href="#5-xhtml-102000">5. XHTML 1.0（2000年）</a></li>
+<li><a href="#6-html52014">6. HTML5（2014年，最新稳定版本）</a></li>
+<li><a href="#7-html-51">7. 未来展望（HTML 5.1及更高版本）</a></li>
+<li><a href="#_2">总结</a></li>
+</ul>
+</li>
+<li><a href="#docearpdf">有哪些类似docear那样能提取所有pdf文档的批注,集中在一起阅读的工具软件</a><ul>
+<li><a href="#1-marginnote">1. MarginNote</a></li>
+<li><a href="#2-updfai">2. UPDF（推荐AI功能版）</a></li>
+<li><a href="#3-zotero-zotfilebetter-notes">3. Zotero + 插件（如Zotfile、Better Notes）</a></li>
+<li><a href="#4-qigga">4. Qigga</a></li>
+<li><a href="#5-adobe-acrobat-reader-dc">5. Adobe Acrobat Reader DC</a></li>
+<li><a href="#6-pdf-xchange-editor">6. PDF-XChange Editor</a></li>
+<li><a href="#7-foxit-reader">7. Foxit Reader</a></li>
+<li><a href="#_3">总结与建议</a></li>
+</ul>
+</li>
+<li><a href="#uartdmauart">单片机与外设通过UART等通信，如何通过dma避免单片机主动查询UART</a><ul>
+<li><a href="#1-uart-dma">1. 配置 UART 和 DMA</a></li>
+<li><a href="#2-dma">2. 使用 DMA 接收数据</a></li>
+<li><a href="#3">3. 配置接收超时中断</a></li>
+<li><a href="#4-dma">4. DMA 发送数据</a></li>
+<li><a href="#_4">示例代码</a><ul>
+<li><a href="#uart-dma">UART 和 DMA 初始化</a></li>
+<li><a href="#dma">DMA 发送数据</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#qopenwrt">Q:路由器上的OpenWrt有哪些常用的软件包</a><ul>
+<li><a href="#_5">基础网络工具</a></li>
+<li><a href="#_6">安全和隐私工具</a></li>
+<li><a href="#_7">智能家居相关工具</a></li>
+<li><a href="#_8">系统工具</a></li>
+<li><a href="#_9">第三方软件包</a></li>
+</ul>
+</li>
+<li><a href="#qyoctoadbfastboot">&#x20;Q\:yocto的编译版本中如何加入adb和fastboot功能</a><ul>
+<li><a href="#1-adb">1. 配置 ADB 功能</a><ul>
+<li><a href="#_10">步骤：</a></li>
+</ul>
+</li>
+<li><a href="#2-fastboot">2. 配置 Fastboot 功能</a><ul>
+<li><a href="#_11">步骤：</a></li>
+</ul>
+</li>
+<li><a href="#3_1">3. 注意事项</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="qpicozero">Q:树莓派pico和zero的区别?</h1>
+<p>A:树莓派Pico和Zero是两款不同的产品，它们各自有不同的特点和用途。以下是它们之间的主要区别：</p>
+<ol>
+<li>
+<p><strong>处理器和性能</strong>：</p>
+<ul>
+<li><strong>树莓派Pico</strong>：搭载了Raspberry Pi设计的RP2040微控制器芯片，具有双核ARM Cortex M0+处理器，运行频率高达133 MHz，拥有264KB的SRAM和2MB的板载闪存。</li>
+<li><strong>树莓派Zero</strong>：使用的是Broadcom BCM2835处理器，ARM11单核700MHz CPU。</li>
+</ul>
+</li>
+<li>
+<p><strong>内存</strong>：</p>
+<ul>
+<li><strong>树莓派Pico</strong>：具有264KB的SRAM。</li>
+<li><strong>树莓派Zero</strong>：拥有512MB的RAM。</li>
+</ul>
+</li>
+<li>
+<p><strong>尺寸和体积</strong>：</p>
+<ul>
+<li><strong>树莓派Pico</strong>：体积更小，尺寸为51mm x 21mm x 1mm，体积为1.07cm³。</li>
+<li><strong>树莓派Zero</strong>：尺寸为66mm x 30.5mm x 5mm，体积为10.06cm³。</li>
+</ul>
+</li>
+<li>
+<p><strong>连接性</strong>：</p>
+<ul>
+<li><strong>树莓派Pico</strong>：支持USB 1.1设备和主机模式，2个SPI，2个I2C，2个UART，3个12位ADC，16个可控PWM通道。Pico W型号还增加了无线(802.11n)和蓝牙5.2功能。</li>
+<li><strong>树莓派Zero</strong>：有一个微型USB口和迷你HDMI口，Zero W型号支持802.11n Wi-Fi和蓝牙4.1/LE。</li>
+</ul>
+</li>
+<li>
+<p><strong>存储和操作系统</strong>：</p>
+<ul>
+<li><strong>树莓派Pico</strong>：不包含操作系统，需要用户部署代码以执行任务。</li>
+<li><strong>树莓派Zero</strong>：可以运行完整的操作系统，如Debian GNU/Linux、Fedora、Arch Linux等。</li>
+</ul>
+</li>
+<li>
+<p><strong>用途</strong>：</p>
+<ul>
+<li><strong>树莓派Pico</strong>：更适合简单的任务，作为一个微控制器板，专为与硬件互动而设计。</li>
+<li><strong>树莓派Zero</strong>：是一个完全工作的计算机，适合需要操作系统的复杂DIY项目。</li>
+</ul>
+</li>
+<li>
+<p><strong>价格</strong>：</p>
+<ul>
+<li><strong>树莓派Pico</strong>：官方指导价为4美元。</li>
+<li><strong>树莓派Zero</strong>：起价为5美元（对于带有Wi-Fi的版本，起价为10美元）。</li>
+</ul>
+</li>
+</ol>
+<p>总结来说，Pico是一款微控制器，适合简单的、一次性的任务，而Zero是一款完整的计算机，适合需要操作系统支持的更复杂的项目。选择哪个产品取决于你的具体需求和预算。</p>
+<h1 id="q">Q:有什么开发板可以当调试工具？</h1>
+<p>A:根据您的需求，以下是一些简易的嵌入式调试工具，它们可以用来调试I2C和SPI接口：</p>
+<ol>
+<li>
+<p><strong>CH341A工具</strong>：这是一个串口工具，可以实现UART、IIC、SPI根据跳线帽的配置和对应的接线来实现。它提供了上位机软件支持，可以用于测试I2C和SPI设备。</p>
+</li>
+<li>
+<p><strong>USB转IIC/I2C/SPI/UART适配器模块</strong>：这是一个开发调试工具，可以通过USB或者UART接口发送协议字符串，由模块转换成I2C、SPI等接口的硬件时序电信号，实现与这些接口芯片、设备的快速测试。</p>
+</li>
+<li>
+<p><strong>i2c-tools</strong>：这是一个专门用于调试I2C的工具集，包括<code>i2cdetect</code>、<code>i2cdump</code>、<code>i2cget</code>、<code>i2cset</code>等工具，可以检测I2C设备、读写I2C设备寄存器等。</p>
+</li>
+<li>
+<p><strong>spi-tools</strong>：这个软件包包含一些简单的命令行工具，用于操作Linux下的spidev设备，包括<code>spi-config</code>和<code>spi-pipe</code>等工具，可以查询或设置SPI配置，实现向SPI设备同时发送和接收数据。</p>
+</li>
+<li>
+<p><strong>H7-TOOL</strong>：这是一个多功能的嵌入式开发工具，它支持I2C和SPI的主从模式调试，并且提供了波形展示功能。</p>
+</li>
+<li>
+<p><strong>Exlink Tool</strong>：这是一款优雅的嵌入式多功能调试器，虽然具体功能没有详细描述，但从名字来看，它可能包含用于I2C和SPI调试的工具。</p>
+</li>
+</ol>
+<p>这些工具可以帮助您在嵌入式开发中进行I2C和SPI接口的调试工作。您可以根据自己的具体需求选择合适的工具进行使用。</p>
+<h1 id="qpicostm32esp32">Q:树莓派pico和常用的单片机芯片如stm32,esp32,有哪些优劣势?</h1>
+<p>A:</p>
+<p>树莓派Pico、STM32和ESP32都是流行的微控制器，它们各自有不同的优势和劣势。以下是它们的比较：</p>
+<p>树莓派Pico</p>
+<p>优势：</p>
+<p>• 性能强大：搭载RP2040芯片，支持双核、多任务处理，运行频率133MHz。</p>
+<p>• 支持标准C++库：适合现代嵌入式开发。</p>
+<p>• 低功耗：非常适合便携设备和长期运行的低功耗应用。</p>
+<p>• 高性价比：价格极低，性价比高。</p>
+<p>劣势：</p>
+<p>• 无内置联网功能：对于联网需求较高的项目需额外模块支持。</p>
+<p>• 生态系统相对较新：参考资料和示例项目较少。</p>
+<p>STM32</p>
+<p>优势：</p>
+<p>• 高性能：采用了ARM Cortex-M核，具有高性能、低功耗、低成本等特点。</p>
+<p>• 生态系统完善：包括各种开发工具、操作系统和第三方库等，使得开发者可以快速地开发出高质量的嵌入式系统。</p>
+<p>• 可靠性：经过了广泛的应用和测试，具有高可靠性和稳定性。</p>
+<p>• 集成度高：集成了丰富的外设接口和功能模块，降低了硬件和软件设计的复杂度。</p>
+<p>• 易于开发：支持多种编程语言和开发工具，使得开发者可以快速上手。</p>
+<p>劣势：</p>
+<p>• 价格：价格相对较高，不适合一些低成本的应用场合。</p>
+<p>• 功耗：虽然STM32的功耗相对较低，但在一些需要超低功耗的应用场合，其功耗可能仍较高。</p>
+<p>• 生态系统依赖：一些开发者可能过度依赖第三方库和工具，导致自主开发能力不足。</p>
+<p>• 资源占用：STM32的资源占用相对较大，可能不适合一些资源受限的应用场合。</p>
+<p>ESP32</p>
+<p>优势：</p>
+<p>• 双核处理器：能够多线程实时处理。</p>
+<p>• 高速主频：240MHz，速度快且价格相对较低。</p>
+<p>• 自带蓝牙和Wifi：不用再花费成本去购置额外模块，成本更加低。</p>
+<p>• 编程环境友好：可以使用Arduino环境，编程难度比STM32低很多，开源项目多，开发速度快。</p>
+<p>劣势：</p>
+<p>• 引脚数量过少：在许多产品开发过程中需要大量的IO口来检测开关状态，同时需要大量引脚控制电机，在这种情况下，大家就只能选择STM32。</p>
+<p>• 计算性能限制：由于功耗和芯片尺寸的限制，ESP32的计算性能相对有限，不适合处理复杂的算法和大规模数据计算。</p>
+<p>• 实时性不足：在某些实时性要求较高的场景下表现可能会有所不足。</p>
+<p>综上所述，树莓派Pico适合于需要较高计算能力和丰富接口的应用场景，STM32适合于性能要求较高的应用场景，而ESP32则适合于物联网、低功耗要求的场景。开发者应根据具体的应用场景和需求来选择合适的微控制器。</p>
+<h1 id="qmodbuscan">Q\:modbus和can总线的关系，如何选择？</h1>
+<p>A:</p>
+<p>Modbus和CAN总线都是工业控制领域中常用的通信协议，它们各自有不同的特点和适用场景。以下是它们之间的关系和选择指南：</p>
+<p>Modbus和CAN总线的关系：</p>
+<p>• 通信协议类型：Modbus是一种串行通信协议，而CAN总线是一种基于总线的通信协议。</p>
+<p>• 应用领域：两者都广泛应用于工业控制、汽车电子等领域，但Modbus更常见于PLC间的通信，而CAN总线则在汽车控制系统中更为常见。</p>
+<p>• 数据传输方式：CAN总线采用广播式数据传输，所有节点都可以接收到发送的消息，而Modbus采用点对点或主从式的数据传输。</p>
+<p>• 网络结构：CAN总线使用基于总线型拓扑结构，所有节点连接在同一条总线上，而Modbus可以使用不同的物理层，如RS-485或以太网，构建更灵活的网络结构。</p>
+<p>• 数据帧格式：CAN总线使用固定长度的数据帧，而Modbus使用可变长度的数据帧，通过功能码区分不同类型的数据。</p>
+<p>如何选择：</p>
+<p>• 速度：CAN总线的数据传输速度比Modbus快，最高可达1Mbps，而Modbus的最高速率只有19.2Kbps。</p>
+<p>• 安全性：Modbus支持加密和认证功能，提供更好的数据安全性，而CAN总线的安全性较低，不支持加密或认证功能。</p>
+<p>• 成本：CAN总线的成本低于Modbus，因为它可以使用标准的接口，节省接口设计和安装成本。</p>
+<p>• 实时性：CAN总线适用于大规模系统、高可靠性和实时性要求较高的场景，而Modbus适用于小型系统或需要精确控制的环境。</p>
+<p>• 系统集成：对于系统集成，如果需要传输大量数据，Modbus可能更有优势，因为它每帧数据的数据量较大。</p>
+<p>• 实时语音传输：对于需要传输语音信号的系统，CAN总线可能更适合，因为它可以提供更快的数据传输速率。</p>
+<p>• 传输故障停机信号：对于需要快速响应的故障停机信号，CAN总线由于其快速的传输特性，可能更适合这种应用。</p>
+<p>综上所述，选择Modbus还是CAN总线应根据具体的应用场景、数据传输速度需求、安全性要求、成本预算以及系统的实时性要求来决定。每种协议都有其独特的优势和局限性，合理选择可以提高系统的效率和可靠性。</p>
+<h1 id="qexcel">Q\:excel中格式刷如何快速应用到一行或者一列,不需要鼠标拖动?</h1>
+<p>A:在Excel中，如果你想要快速应用格式刷到一行或一列，而不需要使用鼠标拖动，可以使用以下快捷方法：</p>
+<ol>
+<li>
+<p><strong>使用快捷键</strong>：</p>
+<ul>
+<li>首先，选中已经设置好格式的单元格。</li>
+<li>然后，按下 <code>Ctrl + Shift + C</code> 复制格式。</li>
+<li>接着，选中你想要应用格式的整行或整列单元格。</li>
+<li>最后，按下 <code>Ctrl + Shift + V</code> 粘贴格式 。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用双击格式刷</strong>：</p>
+<ul>
+<li>选中已经设置好格式的单元格，然后双击“格式刷”按钮，这样你就可以连续多次进行格式刷了。</li>
+<li>接着，使用键盘上的箭头键来移动到你想要应用格式的行或列的首个单元格。</li>
+<li>按下 <code>Ctrl + Shift + ↓</code>（向下箭头）或 <code>Ctrl + Shift + →</code>（向右箭头）来快速选择整行或整列。</li>
+<li>格式刷将会自动应用到整行或整列 。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用查找和选择</strong>：</p>
+<ul>
+<li>双击格式刷后，使用 <code>Ctrl + F</code> 打开查找对话框。</li>
+<li>输入特定的内容，然后点击“查找全部”来选中所有包含该内容的单元格。</li>
+<li>使用 <code>Ctrl + A</code> 来全选所有查找到的单元格，这样格式刷就会应用到所有选中的单元格 。</li>
+</ul>
+</li>
+</ol>
+<p>以上方法可以帮助你快速地将格式应用到一行或一列，而不需要手动拖动鼠标，从而提高工作效率。</p>
+<h1 id="qexcel_1">Q\:excel把一列使用相同公式时,需要按住鼠标往下拖,有更方便的方法吗</h1>
+<p>A:在Excel中，如果你想要对一列数据应用相同的公式，除了手动拖动填充柄之外，还有几种更快捷的方法：</p>
+<ol>
+<li>
+<p><strong>双击填充柄</strong>：</p>
+<ul>
+<li>首先，你需要在第一个单元格中输入你的公式。</li>
+<li>然后，将鼠标光标放在单元格右下角的填充柄（一个小方块）上。</li>
+<li>双击填充柄，Excel会自动将公式应用到列中的所有相邻单元格，直到遇到空白单元格或不同的数据。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用快捷键</strong>：</p>
+<ul>
+<li>输入公式后，按<code>Ctrl</code> + <code>D</code>（向下填充）或<code>Ctrl</code> + <code>R</code>（向右填充），Excel会将公式复制到选定的单元格区域。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用菜单命令</strong>：</p>
+<ul>
+<li>你可以选中包含公式的单元格，然后点击“开始”选项卡下的“编辑”组中的“填充”按钮，选择“向下填充”或“向右填充”。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用“粘贴特殊”功能</strong>：</p>
+<ul>
+<li>首先复制包含公式的单元格。</li>
+<li>然后选中你想要应用公式的单元格区域。</li>
+<li>右键点击，选择“粘贴特殊”，然后选择“公式”，这样就会将公式粘贴到选定的单元格中。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用Excel表格</strong>：</p>
+<ul>
+<li>将你的数据转换为Excel表格（通过选择数据区域，然后点击“插入”选项卡下的“表格”）。</li>
+<li>在表格中，当你在一个单元格中输入公式并按下<code>Enter</code>后，Excel会自动将公式应用到表格中所有相应的单元格。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用“查找和选择”功能</strong>：</p>
+<ul>
+<li>输入公式后，按<code>Ctrl</code> + <code>G</code>打开“定位条件”对话框。</li>
+<li>选择“定位条件”，然后点击“特殊”按钮，选择“空值”。</li>
+<li>这样会选中所有空白单元格，然后你可以输入公式并按<code>Ctrl</code> + <code>Enter</code>，Excel会将公式填充到所有选中的空白单元格中。</li>
+</ul>
+</li>
+</ol>
+<p>这些方法都可以帮助你更快地将公式应用到一列或多列数据中，提高工作效率。</p>
+<h1 id="qadafruit">Q:有哪些类似Adafruit的公司,它们开源的哪些嵌入式开发库</h1>
+<p>A:
+类似Adafruit的公司有SparkFun，它也是从销售电子套件和古怪组件起步，现在发展成为一个电商王国，拥有超过150名员工，年收入达到3200万美元。</p>
+<p>以下是一些开源的嵌入式开发库：</p>
+<ol>
+<li><strong>cJSON</strong>：一个基于C语言的轻量级的JSON解析库。</li>
+<li><strong>jsmn</strong>：一个小巧的基于C语言的JSON解析库。</li>
+<li><strong>inih</strong>：C语言编写的INI文件解析器。</li>
+<li><strong>lwrb</strong>：一个轻量级通用环缓冲区管理器库。</li>
+<li><strong>cQueue</strong>：使用ANSI C编写的消息队列功能函数。</li>
+<li><strong>Unity</strong>：一个轻量级的、适合嵌入式的测试框架。</li>
+<li><strong>Embedded Unit</strong>：一个纯标准C构建的单元测试框架。</li>
+<li><strong>CuTest</strong>：一款微小的C语言单元测试框架。</li>
+<li><strong>cmockery</strong>：谷歌C单元测试框架。</li>
+<li><strong>googletest</strong>：谷歌C++测试框架。</li>
+<li><strong>mbedtls</strong>：一个开源、便携、易于使用、可读的和灵活的SSL库。</li>
+<li><strong>mosquitto</strong>：一个开源的MQTT代理。</li>
+<li><strong>QP</strong>：QP实时嵌入式框架。</li>
+<li><strong>MS-RTOS</strong>：Micro Safe RTOS。</li>
+<li><strong>protobuf-c</strong>：protobuf-c。</li>
+<li><strong>lw_oopc</strong>：轻量级的C语言面向对象编程框架。</li>
+<li><strong>PLOOC</strong>：受保护的低开销面向对象编程。</li>
+<li><strong>cmd-parser</strong>：一个非常简单好用的命令解析器。</li>
+<li><strong>mqttclient</strong>：一个省资源、高稳定的MQTT客户端。</li>
+<li><strong>NorthFrame</strong>：一个单片机极简图形化状态机框架。</li>
+</ol>
+<p>这些库涵盖了从基础的文件解析、数据结构、网络通信到测试框架等多个方面，为嵌入式开发提供了丰富的资源。</p>
+<h1 id="q_1">Q:常见智驾车的算力</h1>
+<p><a href="https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/0711d6ffbec14195ae46fef09cbda708~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgZmVmamxzZGZkZnN4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTk0MzU5MjI4OTQ1MTg5NSJ9&amp;rk3s=f64ab15b&amp;x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&amp;x-orig-expires=1740661544&amp;x-orig-sign=B3piRz9M6xtN4YD7nw%2BgJGWARBk%3D">https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/0711d6ffbec14195ae46fef09cbda708~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgZmVmamxzZGZkZnN4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTk0MzU5MjI4OTQ1MTg5NSJ9&amp;rk3s=f64ab15b&amp;x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&amp;x-orig-expires=1740661544&amp;x-orig-sign=B3piRz9M6xtN4YD7nw%2BgJGWARBk%3D</a></p>
+<h1 id="q-dockerhypervisor">Q: docker在嵌入式系统能替代hypervisor吗</h1>
+<p>A: Docker 在嵌入式系统中可以作为一种有效的工具来提高开发效率和环境一致性，但它并不能完全替代 hypervisor。以下是一些关键点来解释这两者在嵌入式系统中的应用和区别：</p>
+<ol>
+<li>
+<p><strong>虚拟化技术的不同</strong>：</p>
+<ul>
+<li>Hypervisor 是一种运行在基础物理服务器和操作系统之间的中间软件层，可以让多个操作系统和应用共享硬件资源。它提供了高度的隔离和安全性，适合运行不同的操作系统。</li>
+<li>Docker 是一种操作系统虚拟化（也叫容器化）的技术，可以在同一个操作系统内核下创建多个隔离的虚拟环境，也叫做容器。相比 Hypervisor，Docker 更省资源，启动速度更快，部署更方便，但隔离性不如 Hypervisor。</li>
+</ul>
+</li>
+<li>
+<p><strong>资源消耗和启动速度</strong>：</p>
+<ul>
+<li>Hypervisor 需要为每个虚拟机分配资源，包括CPU、内存和存储，这使得它们在资源消耗和启动速度上不如 Docker 容器高效。</li>
+<li>Docker 容器共享宿主机的内核，因此它们的资源占用和启动时间都比虚拟机要少和快，这对于资源受限的嵌入式系统来说是一个很大的优势。</li>
+</ul>
+</li>
+<li>
+<p><strong>适用场景</strong>：</p>
+<ul>
+<li>Docker 适合运行相同的操作系统，提供高效的资源利用和部署便捷性。</li>
+<li>Hypervisor 适合运行不同的操作系统，提供高度的隔离和安全性。</li>
+</ul>
+</li>
+<li>
+<p><strong>安全性和隔离性</strong>：</p>
+<ul>
+<li>Docker 容器共享宿主机的内核，一旦容器被攻破，宿主机也可能受到威胁。</li>
+<li>Hypervisor 提供了更强的隔离性，因为它为每个操作系统提供了一个完整的虚拟环境。</li>
+</ul>
+</li>
+<li>
+<p><strong>在嵌入式系统中的应用案例</strong>：</p>
+<ul>
+<li>Docker 已经被用于嵌入式系统开发，例如在交叉工具链编译环境的搭建中，以及在车载娱乐系统等汽车电子领域的应用和。</li>
+</ul>
+</li>
+</ol>
+<p>综上所述，Docker 在嵌入式系统中可以作为一个有益的补充，特别是在需要快速部署和资源优化的场景中。然而，由于其隔离性不如 hypervisor，以及在某些情况下可能存在的性能开销和系统兼容性问题，Docker 并不能完全替代 hypervisor。是否使用 Docker 作为首选工具，需要根据具体的应用场景和需求进行综合考量。</p>
+<h1 id="rt-threadesp32">rt-thread支持esp32吗</h1>
+<p>是的，<strong>RT-Thread</strong> 官方及社区已对 <strong>ESP32</strong> 系列芯片提供了支持，尤其是 <strong>ESP32-C3</strong> 等型号。以下是具体的支持情况及实现方式分析：</p>
+<hr />
+<h3 id="1-bsp">1. <strong>硬件支持与BSP</strong></h3>
+<ul>
+<li><strong>ESP32-C3开发板</strong>：RT-Thread 提供了针对 ESP32-C3 的 <strong>BSP（板级支持包）</strong>，支持大部分 ESP32-C3 开发板，例如支持调试功能的“简约款”开发板（价格低至9.9元）。用户可通过 GitHub 获取相关代码，并基于 VSCode 或 ESP-IDF 工具链进行开发。</li>
+<li><strong>内核适配</strong>：RT-Thread 通过修改 ESP-IDF 框架的内核层，将原生的 FreeRTOS 替换为 RT-Thread，同时保留 ESP-IDF 的硬件驱动和组件支持。这种方式无需重新编写底层驱动，显著降低了移植难度。</li>
+</ul>
+<hr />
+<h3 id="2">2. <strong>开发环境与工具链</strong></h3>
+<ul>
+<li><strong>环境搭建</strong>：在 Linux 或 Windows 系统中，用户可通过 <strong>VSCode</strong> 或 <strong>ESP-IDF 工具链</strong> 快速搭建 RT-Thread 开发环境。针对 ESP32-C3，社区提供了补丁文件（如 <code>0001-add-the-config-of-RTTHREAD.patch</code>），需配合 ESP-IDF v4.4 版本使用。</li>
+<li><strong>调试支持</strong>：部分 ESP32-C3 开发板支持免 JLINK 调试，通过串口或集成的调试器即可完成烧录和调试。</li>
+</ul>
+<hr />
+<h3 id="3-freertos">3. <strong>FreeRTOS 兼容层</strong></h3>
+<ul>
+<li><strong>API 兼容性</strong>：RT-Thread 提供了 <strong>FreeRTOS 兼容层</strong>，允许开发者直接将基于 FreeRTOS 的代码迁移到 RT-Thread 上运行。该兼容层覆盖了线程、消息队列、互斥量等核心功能，但在部分细节（如中断处理、内存分配）上需注意差异。</li>
+<li><strong>混合开发</strong>：支持在 RT-Thread 中同时调用 FreeRTOS 和 RT-Thread 的 API，但需注意优先级规则（RT-Thread 优先级数值越小越高，FreeRTOS 相反）。</li>
+</ul>
+<hr />
+<h3 id="4">4. <strong>功能特性与生态整合</strong></h3>
+<ul>
+<li><strong>网络功能</strong>：RT-Thread 支持基于 ESP32 的 Wi-Fi 和蓝牙配网功能。例如，社区开发的“配网助手”小程序可通过蓝牙 UUID 实现设备配网，且测试显示稳定性良好。</li>
+<li><strong>组件扩展</strong>：通过 RT-Thread 的 <strong>En工具</strong> 可灵活添加软件包（如文件系统、网络协议栈），并与 ESP-IDF 的硬件驱动（如 GPIO、UART、ADC）无缝集成。</li>
+</ul>
+<hr />
+<h3 id="5">5. <strong>社区与持续集成</strong></h3>
+<ul>
+<li><strong>开源协作</strong>：ESP32 相关 BSP 和驱动代码均在 GitHub 开源，开发者可提交 PR 参与完善。例如，针对 ADC 驱动的测试可通过 GitHub Action 自动化构建验证。</li>
+<li><strong>文档与教程</strong>：社区提供了详细的移植指南和问题解决方案，覆盖环境配置、调试技巧及常见错误处理。</li>
+</ul>
+<hr />
+<h3 id="_1">总结</h3>
+<p>RT-Thread 对 ESP32 的支持已较为成熟，尤其在 <strong>ESP32-C3</strong> 上实现了低成本、高灵活性的开发方案。开发者可基于现有生态快速迁移项目，或结合 RT-Thread 的丰富组件（如物联网协议、GUI框架）扩展功能。如需进一步了解，可参考 <a href="https://github.com/RT-Thread/rt-thread/tree/master/bsp/ESP32_C3">RT-Thread ESP32-C3 BSP 文档</a> 及社区教程。</p>
+<h1 id="html-10html">列表说明html 1.0到最新html 版本的区别</h1>
+<p>HTML（HyperText Markup Language，超文本标记语言）是用于构建网页的标准标记语言。自HTML 1.0发布以来，HTML经历了多次重大更新和改进，以适应不断变化的网络需求和技术发展。以下是HTML 1.0到最新版本（HTML5）的主要区别和演变：</p>
+<hr />
+<h3 id="1-html-101993">1. <strong>HTML 1.0（1993年）</strong></h3>
+<ul>
+<li><strong>特点</strong>：<ul>
+<li>最初版本，主要用于简单文本的结构化。</li>
+<li>支持基本的标题、段落、列表和超链接。</li>
+<li>缺乏样式和布局控制。</li>
+</ul>
+</li>
+<li><strong>应用场景</strong>：<ul>
+<li>主要用于简单的文档展示，没有复杂的交互功能。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="2-html-201995">2. <strong>HTML 2.0（1995年）</strong></h3>
+<ul>
+<li><strong>特点</strong>：<ul>
+<li>引入了表单元素（如 <code>&lt;form&gt;</code>、<code>&lt;input&gt;</code>），支持用户输入。</li>
+<li>支持表格（<code>&lt;table&gt;</code>），用于数据展示。</li>
+<li>引入了更复杂的文档结构，如 <code>&lt;body&gt;</code> 和 <code>&lt;head&gt;</code>。</li>
+</ul>
+</li>
+<li><strong>应用场景</strong>：<ul>
+<li>可以创建简单的交互式网页，如在线表单和数据表格。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="3-html-321997">3. <strong>HTML 3.2（1997年）</strong></h3>
+<ul>
+<li><strong>特点</strong>：<ul>
+<li>引入了更多布局和样式功能，如 <code>&lt;font&gt;</code>、<code>&lt;center&gt;</code> 等。</li>
+<li>支持框架（Frames），可以将页面分割为多个部分。</li>
+<li>引入了更复杂的表格功能，如行和列的跨度。</li>
+</ul>
+</li>
+<li><strong>应用场景</strong>：<ul>
+<li>网页设计开始注重布局和视觉效果，但样式仍然依赖于HTML标签。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="4-html-4011999">4. <strong>HTML 4.01（1999年）</strong></h3>
+<ul>
+<li><strong>特点</strong>：<ul>
+<li>引入了CSS（层叠样式表）的支持，将内容与样式分离。</li>
+<li>增强了表单功能，支持更多的输入类型。</li>
+<li>引入了JavaScript的支持，用于动态交互。</li>
+<li>引入了无障碍性（Accessibility）标准。</li>
+</ul>
+</li>
+<li><strong>应用场景</strong>：<ul>
+<li>网页设计更加灵活，样式和功能分离，便于维护和更新。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="5-xhtml-102000">5. <strong>XHTML 1.0（2000年）</strong></h3>
+<ul>
+<li><strong>特点</strong>：<ul>
+<li>XHTML是HTML的XML化版本，要求更严格的语法。</li>
+<li>所有标签必须闭合，属性必须加引号。</li>
+<li>兼容XML工具和解析器。</li>
+</ul>
+</li>
+<li><strong>应用场景</strong>：<ul>
+<li>主要用于需要严格语法的场景，如与XML工具集成。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="6-html52014">6. <strong>HTML5（2014年，最新稳定版本）</strong></h3>
+<ul>
+<li><strong>特点</strong>：<ul>
+<li>引入了语义化标签（如 <code>&lt;header&gt;</code>、<code>&lt;footer&gt;</code>、<code>&lt;nav&gt;</code>、<code>&lt;article&gt;</code> 等），使页面结构更清晰。</li>
+<li>增强了多媒体支持，如 <code>&lt;video&gt;</code> 和 <code>&lt;audio&gt;</code> 标签。</li>
+<li>引入了新的API，如Canvas（2D绘图）、WebGL（3D绘图）、本地存储（localStorage）等。</li>
+<li>支持响应式设计，适应不同设备屏幕。</li>
+<li>引入了WebSockets，支持实时通信。</li>
+<li>引入了新的表单控件，如日期选择器、颜色选择器等。</li>
+</ul>
+</li>
+<li><strong>应用场景</strong>：<ul>
+<li>现代网页设计和开发，支持复杂的交互功能、多媒体内容和跨平台适配。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="7-html-51">7. <strong>未来展望（HTML 5.1及更高版本）</strong></h3>
+<ul>
+<li><strong>特点</strong>：<ul>
+<li>持续更新和改进，例如HTML 5.1引入了更多无障碍性功能和多媒体改进。</li>
+<li>HTML 5.2进一步增强了安全性和隐私保护。</li>
+<li>HTML的未来发展将继续关注性能优化、跨平台适配和新兴技术的集成（如WebVR、WebAssembly等）。</li>
+</ul>
+</li>
+<li><strong>应用场景</strong>：<ul>
+<li>适应未来网络技术的发展，支持更复杂的交互和更高效的内容交付。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="_2">总结</h3>
+<p>从HTML 1.0到HTML5，HTML经历了从简单文本标记语言到功能强大的网页开发语言的转变。HTML5不仅在语义化、多媒体支持和交互功能上有了巨大提升，还引入了现代网络开发所需的各种API和工具。随着技术的不断进步，HTML将继续发展，以满足未来网络的需求。</p>
+<h1 id="docearpdf">有哪些类似docear那样能提取所有pdf文档的批注,集中在一起阅读的工具软件</h1>
+<p>根据你的需求，以下是一些能够提取多个PDF文档的批注并集中管理的工具软件，类似Docear的功能特点，并结合了搜索结果中的推荐：</p>
+<hr />
+<h3 id="1-marginnote">1. <strong>MarginNote</strong></h3>
+<ul>
+<li><strong>功能特点</strong>：<ul>
+<li>专为学术研究和深度阅读设计，支持将PDF中的批注（如高亮、笔记）自动整合到思维导图或大纲中，方便集中查看和管理。</li>
+<li>支持多平台同步（iOS、Mac），可跨设备访问笔记。</li>
+<li>提供“学习卡”功能，帮助复习批注内容。</li>
+</ul>
+</li>
+<li><strong>适用场景</strong>：适合学生、研究人员需要结构化整理文献批注的场景。</li>
+</ul>
+<hr />
+<h3 id="2-updfai">2. <strong>UPDF（推荐AI功能版）</strong></h3>
+<ul>
+<li><strong>功能特点</strong>：<ul>
+<li>内置AI工具，可自动提炼PDF文档的核心要点，并生成总结性文本，支持批量处理多个文档的批注。</li>
+<li>支持注释导出为文本或单独文件，方便集中阅读。</li>
+<li>跨平台同步（Windows/Mac/移动端），云存储功能便于团队协作管理批注。</li>
+</ul>
+</li>
+<li><strong>亮点</strong>：AI技术能快速解析复杂内容，简化批注整理流程。</li>
+</ul>
+<hr />
+<h3 id="3-zotero-zotfilebetter-notes">3. <strong>Zotero + 插件（如Zotfile、Better Notes）</strong></h3>
+<ul>
+<li><strong>功能特点</strong>：<ul>
+<li>免费开源的文献管理工具，通过插件扩展功能。例如，<strong>Zotfile</strong>可提取PDF中的批注并导出为单独笔记文件，<strong>Better Notes</strong>支持将批注整合到Markdown文档中。</li>
+<li>支持标签分类和全文搜索，便于批量管理多篇文献的注释。</li>
+</ul>
+</li>
+<li><strong>适用场景</strong>：学术写作或需要长期管理大量文献批注的用户。</li>
+</ul>
+<hr />
+<h3 id="4-qigga">4. <strong>Qigga</strong></h3>
+<ul>
+<li><strong>功能特点</strong>：<ul>
+<li>支持实时协作批注，所有用户的注释和评论可集中显示在文档中，并提供版本控制功能。</li>
+<li>可导出批注记录或生成报告，适合团队项目中的集中审阅。</li>
+</ul>
+</li>
+<li><strong>亮点</strong>：供应链管理背景的工具，但注释功能适用于多场景。</li>
+</ul>
+<hr />
+<h3 id="5-adobe-acrobat-reader-dc">5. <strong>Adobe Acrobat Reader DC</strong></h3>
+<ul>
+<li><strong>功能特点</strong>：<ul>
+<li>支持批量导出所有PDF的注释为汇总文件（如Excel或文本格式）。</li>
+<li>提供“注释摘要”功能，可一键生成所有批注的列表，按页面或作者分类查看。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：高级功能需订阅付费。</li>
+</ul>
+<hr />
+<h3 id="6-pdf-xchange-editor">6. <strong>PDF-XChange Editor</strong></h3>
+<ul>
+<li><strong>功能特点</strong>：<ul>
+<li>提供强大的批注管理面板，支持筛选、排序和导出所有注释。</li>
+<li>允许自定义注释标签，便于分类整理多篇文档的批注。</li>
+</ul>
+</li>
+<li><strong>亮点</strong>：界面直观，适合需要精细管理批注的专业用户。</li>
+</ul>
+<hr />
+<h3 id="7-foxit-reader">7. <strong>Foxit Reader</strong></h3>
+<ul>
+<li><strong>功能特点</strong>：<ul>
+<li>支持将多个PDF的批注汇总到“注释”面板，并导出为FDF文件或文本。</li>
+<li>提供协作共享功能，团队成员的批注可集中显示。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="_3">总结与建议</h3>
+<ul>
+<li><strong>学术研究场景</strong>：优先选择 <strong>MarginNote</strong> 或 <strong>Zotero</strong>，结合思维导图和插件扩展功能。</li>
+<li><strong>团队协作需求</strong>：<strong>Qigga</strong> 或 <strong>UPDF</strong> 的云同步和AI功能更高效。</li>
+<li><strong>基础批注管理</strong>：<strong>Adobe Acrobat</strong> 或 <strong>PDF-XChange Editor</strong> 提供标准化解决方案。</li>
+</ul>
+<p>如需更详细的工具对比或操作指南，可进一步查阅相关网页来源（如）。</p>
+<h1 id="uartdmauart">单片机与外设通过UART等通信，如何通过dma避免单片机主动查询UART</h1>
+<p>在单片机与外设通过 UART 通信时，使用 DMA（直接内存访问）可以有效避免单片机主动查询 UART 状态，从而提高系统的效率和响应速度。以下是实现方法：</p>
+<h3 id="1-uart-dma">1. 配置 UART 和 DMA</h3>
+<p>首先，需要正确配置 UART 和 DMA 的相关参数，包括波特率、数据位、停止位、校验位等，并将 UART 的发送和接收功能与 DMA 通道绑定。</p>
+<h3 id="2-dma">2. 使用 DMA 接收数据</h3>
+<p>通过 DMA 接收数据时，单片机会在接收到数据后自动将数据存储到指定的内存缓冲区，而无需主动查询 UART 状态。可以设置一个较大的接收缓冲区，当接收到数据时，DMA 会自动将数据存入缓冲区。</p>
+<h3 id="3">3. 配置接收超时中断</h3>
+<p>一些单片机（如 GD32F4 系列）支持接收超时中断功能，可以在接收到一定时间间隔的数据后触发中断。通过配置接收超时中断，可以在接收到完整的一帧数据后，通过中断处理函数来处理数据，而无需主动查询 UART 状态。</p>
+<h3 id="4-dma">4. DMA 发送数据</h3>
+<p>发送数据时，也可以通过 DMA 完成。将要发送的数据存储到指定的内存缓冲区，并启动 DMA 发送操作，单片机会自动将数据通过 UART 发送出去。</p>
+<h3 id="_4">示例代码</h3>
+<p>以下是一个基于 GD32F4 系列单片机的示例代码，展示了如何通过 DMA 和接收超时中断实现 UART 数据的接收和发送：</p>
+<h4 id="uart-dma">UART 和 DMA 初始化</h4>
+<pre><code class="language-c">#include &quot;gd32f4xx.h&quot;
+
+UART_HandleTypeDef huart2;
+DMA_HandleTypeDef hdma_rx;
+DMA_HandleTypeDef hdma_tx;
+
+void UART2_Init(void) {
+    // UART2 初始化代码
+    huart2.Instance = USART2;
+    huart2.Init.BaudRate = 115200;
+    huart2.Init.WordLength = UART_WORDLENGTH_8B;
+    huart2.Init.StopBits = UART_STOPBITS_1;
+    huart2.Init.Parity = UART_PARITY_NONE;
+    huart2.Init.Mode = UART_MODE_TX_RX;
+    HAL_UART_Init(&amp;huart2);
+
+    // DMA 初始化代码
+    hdma_rx.Instance = DMA0;
+    hdma_rx.Init.Direction = DMA_MEMORY_TO_PERIPH;
+    hdma_rx.Init.PeriphInc = DMA_PINC_DISABLE;
+    hdma_rx.Init.MemInc = DMA_MINC_ENABLE;
+    hdma_rx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
+    hdma_rx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
+    hdma_rx.Init.Mode = DMA_NORMAL;
+    HAL_DMA_Init(&amp;hdma_rx);
+
+    hdma_tx.Instance = DMA0;
+    hdma_tx.Init.Direction = DMA_PERIPH_TO_MEMORY;
+    hdma_tx.Init.PeriphInc = DMA_PINC_DISABLE;
+    hdma_tx.Init.MemInc = DMA_MINC_ENABLE;
+    hdma_tx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
+    hdma_tx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
+    hdma_tx.Init.Mode = DMA_NORMAL;
+    HAL_DMA_Init(&amp;hdma_tx);
+
+    // 将 UART 和 DMA 绑定
+    HAL_UART_Receive_DMA(&amp;huart2, recv_buf, RX_SERIAL_BUF_SIZE);
+}
+
+void UART2_IRQHandler(void) {
+    if (__HAL_UART_GET_FLAG(&amp;huart2, UART_FLAG_RT) != RESET) {
+        // 接收超时中断处理
+        HAL_UART_DMAStop(&amp;huart2);
+        HAL_UART_Receive_DMA(&amp;huart2, recv_buf, RX_SERIAL_BUF_SIZE);
+        // 处理接收到的数据
+    }
+}
+</code></pre>
+<h4 id="dma">DMA 发送数据</h4>
+<pre><code class="language-c">void UART2_SendData_DMA(uint8_t *data, uint16_t len) {
+    HAL_UART_Transmit_DMA(&amp;huart2, data, len);
+}
+</code></pre>
+<p>通过上述方法，单片机可以利用 DMA 和接收超时中断来高效地处理 UART 数据，避免主动查询 UART 状态，从而提高系统的整体性能。</p>
+<h1 id="qopenwrt">Q:路由器上的OpenWrt有哪些常用的软件包</h1>
+<p>以下是一些 OpenWrt 常用的软件包：</p>
+<h3 id="_5">基础网络工具</h3>
+<ul>
+<li><strong>luci-app-nlbwmon</strong> ：网络带宽监控器，可实时监测网络带宽 usage。</li>
+<li><strong>luci-app-statistics</strong> ：提供详细的网络统计信息，帮助用户了解网络运行状况。</li>
+<li><strong>luci-app-upnp</strong> ：UPnP 服务，可自动端口映射，方便内网设备穿透访问。</li>
+</ul>
+<h3 id="_6">安全和隐私工具</h3>
+<ul>
+<li><strong>luci-app-adblock</strong> ：广告拦截器，能屏蔽网络请求中的广告，提升上网体验。</li>
+<li><strong>luci-app-vpn-policy-routing</strong> ：基于策略的 VPN 路由，可灵活配置 VPN 连接和流量走向。</li>
+<li><strong>luci-app-wireguard</strong> ：WireGuard VPN 服务器 / 客户端，提供安全的 VPN 功能。</li>
+</ul>
+<h3 id="_7">智能家居相关工具</h3>
+<ul>
+<li><strong>luci-app-homeassistant</strong> ：Home Assistant 容器管理，方便智能家居设备的集中管理。</li>
+<li><strong>luci-app-mosquitto</strong> ：MQTT 消息代理，实现设备间的消息传递和通信。</li>
+<li><strong>luci-app-node-red</strong> ：物联网可视化编程工具，通过拖拽节点实现物联网应用逻辑。</li>
+</ul>
+<h3 id="_8">系统工具</h3>
+<ul>
+<li><strong>luci-app-advanced-reboot</strong> ：高级重启选项，提供更多重启方式和设置。</li>
+<li><strong>luci-app-ttyd</strong> ：Web 终端，可在浏览器中直接访问路由器的终端界面。</li>
+<li><strong>luci-app-diskman</strong> ：磁盘管理工具，便于管理路由器连接的存储设备。</li>
+</ul>
+<h3 id="_9">第三方软件包</h3>
+<ul>
+<li><strong>luci-app-adguardhome</strong> ：AdGuard Home 广告拦截，可拦截网络中的广告和恶意软件请求。</li>
+<li><strong>luci-app-openclash</strong> ：OpenClash 代理，基于 Clash 核心的图形化代理软件。</li>
+<li><strong>luci-app-passwall</strong> ：PassWall 代理，提供多种代理功能，支持科学上网。</li>
+<li><strong>luci-app-ssr-plus</strong> ：SSR-Plus 代理，支持多种代理协议，可绕过网络限制。</li>
+<li><strong>luci-app-unblockneteasemusic</strong> ：解锁网易云音乐，解决部分地区网易云音乐的限制问题。</li>
+</ul>
+<h1 id="qyoctoadbfastboot">&#x20;Q\:yocto的编译版本中如何加入adb和fastboot功能</h1>
+<p>要在 Yocto 的编译版本中加入 ADB 和 Fastboot 功能，可以按照以下步骤进行配置和实现：</p>
+<h3 id="1-adb">1. <strong>配置 ADB 功能</strong></h3>
+<h4 id="_10"><strong>步骤：</strong></h4>
+<ol>
+<li>
+<p><strong>内核配置</strong>：</p>
+<ol>
+<li>
+<p>确保内核支持 USB Gadget 和 FunctionFS 功能。可以通过修改内核的 <code>.config</code> 文件，启用以下选项：</p>
+<ul>
+<li>
+<p><code>CONFIG_USB_GADGET=y CONFIG_USB_FUNCTIONFS=y</code></p>
+<ol>
+<li>如果需要支持 ADB，还需启用以下选项：</li>
+</ol>
+</li>
+<li>
+<p><code>CONFIG_USB_ANDROID_ADB=y</code></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>加载 USB 模块</strong>：</p>
+<ol>
+<li>
+<p>在目标设备上加载 USB 模块：</p>
+<ul>
+<li><code>modprobe g_ffs idVendor=0x18d1 idProduct=0x4e42 iSerialNumber="buildroot"</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>挂载 FunctionFS</strong>：</p>
+<ol>
+<li>
+<p>创建挂载点并挂载 FunctionFS：</p>
+<ul>
+<li><code>mkdir -p /dev/usb-ffs/adb mount -t functionfs adb /dev/usb-ffs/adb -o uid=2000,gid=2000</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>运行 ADB 守护进程</strong>：</p>
+<ol>
+<li>
+<p>启动 ADB 守护进程：</p>
+<ul>
+<li><code>adbd &amp;</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>连接设备</strong>：</p>
+<ol>
+<li>使用 USB OTG 线连接设备到主机，主机上安装 ADB 工具后即可通过 <code>adb devices</code> 检查连接状态。</li>
+</ol>
+</li>
+</ol>
+<h3 id="2-fastboot">2. <strong>配置 Fastboot 功能</strong></h3>
+<h4 id="_11"><strong>步骤：</strong></h4>
+<ol>
+<li>
+<p><strong>内核支持</strong>：</p>
+<ol>
+<li>
+<p>确保内核支持 Fastboot 功能，通常需要启用以下选项：</p>
+<ul>
+<li><code>CONFIG_USB_GADGET_FASTBOOT=y</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>进入 Fastboot 模式</strong>：</p>
+<ol>
+<li>
+<p>在设备上进入 Fastboot 模式：</p>
+<ul>
+<li><code>adb reboot bootloader</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>使用 Fastboot 工具</strong>：</p>
+<ol>
+<li>
+<p>在主机上使用 Fastboot 工具进行分区烧录或其他操作：</p>
+<ul>
+<li><code>fastboot devices fastboot flash &lt;partition&gt; &lt;image&gt;</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>重新启动设备</strong>：</p>
+<ol>
+<li>
+<p>完成操作后，使用以下命令重启设备：</p>
+<ul>
+<li><code>fastboot reboot</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="3_1">3. <strong>注意事项</strong></h3>
+<ul>
+<li><strong>ADB 无需认证</strong>：如果需要关闭 ADB 认证，可以在 Yocto 根文件系统中修改 <code>/etc/adb.conf</code> 文件，注释掉认证相关行。</li>
+<li><strong>安全性</strong>：启用 ADB 和 Fastboot 功能可能会带来安全风险，建议在开发环境中使用，并确保设备受到保护。</li>
+</ul>
+<p>通过以上步骤，您可以在 Yocto 的编译版本中成功加入 ADB 和 Fastboot 功能。</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
