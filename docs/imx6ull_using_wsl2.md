@@ -10,9 +10,6 @@
 
 为了保持环境的一致性,还是需要安装ubuntu 18.04.我在微软store下载wsl的ubuntu18.04直接闪退,后来了解到在  [https://store.rg-adguard.net/](https://link.zhihu.com/?target=https%3A//store.rg-adguard.net/) 可以下载商店的软件包,然后用如下图中 1\~3步下载:
 
-![](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/b4c2b16e04dd41b89232ec20b4c56461~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgZmVmamxzZGZkZnN4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTk0MzU5MjI4OTQ1MTg5NSJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1749381318&x-orig-sign=OC%2BZVA8JKRT%2BrPceAsrz9DfKlng%3D)
-
-
 ![](./imx6ull_using_wsl2_00.webp)
 
 第4步:在powershell中安装下载的.appx的离线包:
@@ -227,8 +224,6 @@ wsl编译的100ask-imx6ull-pro-512d-systemv-v1.img 直接拷贝到windows桌面�
 *   100ask\_imx6ull\_flashing\_tool\_v4.0.exe  不要在有空格或者标点符号的路径下运行
 *   Usb otg口升级时,需要直连电脑,不能经过usb hub
 
-![](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/386dbe2497eb45b7a34b3b47f120abac~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgZmVmamxzZGZkZnN4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTk0MzU5MjI4OTQ1MTg5NSJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1749381318&x-orig-sign=88DuAof7vORmOpk5mmWh%2FDcK59Q%3D)
-
 ![](./imx6ull_using_wsl2_10.webp)
 
 ## [升级]只升级zImage+dtb
@@ -242,9 +237,6 @@ cp arch/arm/boot/zImage  /mnt/d
 cp arch/arm/boot/dts/100ask_imx6ull-14x14.dtb  /mnt/d
 ```
 打开mobaxterm的tftp服务器:
-
-![](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/c2667f593a8442739e8d92412d228b4b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgZmVmamxzZGZkZnN4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTk0MzU5MjI4OTQ1MTg5NSJ9&rk3s=e9ecf3d6&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1748873359&x-orig-sign=3oW272cD6UHBVBgP19kvcGEEE9w%3D)
-
 
 ![](./imx6ull_using_wsl2_20.jpg)
 
@@ -281,6 +273,9 @@ tftp -pr 文件名 对方IP地址
 
 通过ssh插件,操作如下:
 
-![](https://p0-xtjj-private.juejin.cn/tos-cn-i-73owjymdk6/ba4c0b9ed8f647099ee707449d03a1a1~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgZmVmamxzZGZkZnN4:q75.awebp?policy=eyJ2bSI6MywidWlkIjoiMTk0MzU5MjI4OTQ1MTg5NSJ9&rk3s=f64ab15b&x-orig-authkey=f32326d3454f2ac7e96d3d06cdbb035152127018&x-orig-expires=1749381318&x-orig-sign=YfwT6%2BI4v4UCHgEF6j2TwIa9AE0%3D)
-
 ![](./imx6ull_using_wsl2_30.webp)
+
+
+---
+
+注:本网站 `https://nsynet.github.io/linux_skill/` 内容基于github pages的 `https://github.com/nsynet/linux_skill` ,中国大陆的 gitee 有对应的克隆仓 `https://gitee.com/nsynet/linux_skill`(大陆的gitee pages 虽然作废了,但是直接看该仓下面的`docs` 文件夹下的markdown文件,体验也是凑合的,不用翻墙,有想法也能随时提交修改request).  

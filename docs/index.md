@@ -26,4 +26,4 @@
 
 ---
 
-本网站 `https://nsynet.github.io/linux_skill/` 基于github pages的 `https://github.com/nsynet/linux_skill` 渲染而成.  
+注:本网站 `https://nsynet.github.io/linux_skill/` 内容基于github pages的 `https://github.com/nsynet/linux_skill` ,中国大陆的 gitee 有对应的克隆仓 `https://gitee.com/nsynet/linux_skill`(大陆的gitee pages 虽然作废了,但是直接看该仓下面的`docs` 文件夹下的markdown文件,体验也是凑合的,不用翻墙,有想法也能随时提交修改request).  
